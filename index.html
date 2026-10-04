@@ -26,10 +26,8 @@
 <meta name="twitter:description" content="Skiron builds small GPU data centers at Midwestern wind farms, running on wind power the grid can’t carry and renting that computing time to people building AI.">
 <meta name="twitter:image" content="https://tjwalsh1.github.io/skiron-site/assets/img/og-image.png">
 <meta name="twitter:image:alt" content="Skiron. Compute that runs on Iowa wind.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cabin-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
 <script src="assets/js/site.js" defer></script>
@@ -160,7 +158,9 @@
       <figcaption class="visually-hidden" id="dg-text">A wind turbine sends power that would otherwise be curtailed to a Skiron site, which is a small barn holding GPU servers and cooling. The site connects over fiber internet to people running AI jobs. A dashed line runs from the turbine down to a transmission tower, labeled the grid, when it has room.</figcaption>
     </figure>
 
-    <dl class="facts">
+    <h3 class="facts-title" id="pilot-h">Pilot details</h3>
+    <p class="plan-note">Our first site is in planning. These are the current plans for it.</p>
+    <dl class="facts" aria-labelledby="pilot-h">
       <div><dt>Size</dt><dd>40 NVIDIA H100 GPUs in five 8-GPU servers</dd></div>
       <div><dt>Power draw</dt><dd>About 51 kW</dd></div>
       <div><dt>Building</dt><dd>Pole barn on a concrete slab</dd></div>
@@ -199,7 +199,7 @@
     <div class="prose">
       <p>A lot of rural communities have watched proposals for enormous data centers and had fair questions about land, noise, water, and what happens to everyone’s power bill. We’ve heard those questions, and they shaped how Skiron works.</p>
       <p>Each site is one farm-style building next to a wind farm that’s already there. It mainly uses power the grid has no room for, so it adds very little new demand to the wider grid. We want every site to be one a county board is comfortable approving and a neighbor barely notices.</p>
-      <!-- TODO(Thomas): if the pilot cooling unit is air-cooled with no water use, add "It uses no water for cooling." here. -->
+      <p>The pilot site is air-cooled. It uses no water for cooling.</p>
     </div>
   </div>
 </section>
@@ -223,10 +223,11 @@
       <div>
         <h3>Thomas Walsh</h3>
         <p class="role">Founder and CEO</p>
-        <!-- TODO(Thomas): add the award names and years for Pin Intelligence and Litia, and anything from LinkedIn worth adding. -->
-        <p>Thomas has spent eight years building and repairing computer hardware and four years in manufacturing and engineering work during and after high school. He has founded two award-winning education technology ventures, Pin Intelligence and Litia.</p>
+        <!-- TODO(Thomas): add the award name and year for Litia (the copy says both ventures are award-winning), and anything from LinkedIn worth adding. -->
+        <p>Thomas has spent eight years building and repairing computer hardware and four years in manufacturing and engineering work during and after high school. He has founded two award-winning education technology ventures, Pin Intelligence and Litia. Pin Intelligence earned an award at the University of Alabama BIG Ideas Competition in 2025.</p>
         <p>He is a second-year student at Northwestern Pritzker School of Law. He has worked as a summer associate at Belin McCormick in Des Moines and is an incoming M&amp;A summer associate at Cooley in Chicago. He lives in Iowa City, within a few hours’ drive of the wind country where Skiron’s first sites will go.</p>
         <p><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">Thomas on LinkedIn</a></p>
+        <p class="note">Skiron is Thomas’s independent venture. It is not affiliated with or endorsed by Northwestern University, Cooley or Belin McCormick.</p>
       </div>
     </div>
   </div>
@@ -270,6 +271,7 @@
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </div>
       </form>
+      <p class="note">When you send a message, your name, email, organization and note go to Thomas by email through a form service. <a href="privacy.html">Privacy details</a></p>
       <!-- TODO(Thomas): choose a domain name and a Skiron email address. Then change the destination in the Web3Forms dashboard and update the canonical, og:url, sitemap and form redirect. -->
       <p class="mail-alt">Prefer email? <a class="js-mail" href="#contact" hidden></a><noscript>thomas.walsh@law.northwestern.edu</noscript></p>
     </div>
@@ -282,11 +284,12 @@
   <div class="bar" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="footer-top">
-      <!-- TODO(Thomas): confirm the legal entity name (is it "Skiron Technology", and is it an LLC or an Inc.?) and update the footer, the copyright line and the structured data in the head. -->
+      <!-- TODO(Thomas): no legal entity exists yet. Once it is formed, update the footer name and copyright line, the structured data in the head, and "Who runs this site" on the privacy page. -->
       <p class="footer-name">Skiron Technology, Iowa City, Iowa</p>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">LinkedIn</a></li>
         <li><a href="#contact">Get in touch</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </div>
     <h2 class="sources-title" id="sources-title">Sources</h2>
@@ -295,7 +298,8 @@
       <li id="source-2">S&amp;P Global Market Intelligence, “US grid congestion intensifies as data centers compound transmission constraints,” September 2026. <a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/09/us-grid-congestion-intensifies-as-data-centers-compound-transmission-constraints" rel="noopener">https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/09/us-grid-congestion-intensifies-as-data-centers-compound-transmission-constraints</a></li>
       <li id="source-3">Enverus, “Time to power: how data center developers can fast-track energization in a constrained grid.” <a href="https://www.enverus.com/blog/time-to-power-how-data-center-developers-can-fast-track-energization-in-a-constrained-grid/" rel="noopener">https://www.enverus.com/blog/time-to-power-how-data-center-developers-can-fast-track-energization-in-a-constrained-grid/</a></li>
     </ol>
-    <p class="copy">© 2026 Skiron Technology</p>
+    <p class="legal">NVIDIA and H100 are trademarks of NVIDIA Corporation. Skiron is not affiliated with NVIDIA.</p>
+    <p class="copy">© 2026 Thomas Walsh</p>
   </div>
 </footer>
 </body>

@@ -1,5 +1,24 @@
 /* Skiron site styles. Colour tokens come from the Skiron deck theme. */
 
+/* Fonts are served from this site, so visiting it makes no request to other companies.
+   Cabin and Inter are licensed under the SIL Open Font License 1.1 (see assets/fonts/OFL-*.txt). */
+@font-face {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("../fonts/cabin-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --paper: #FFFFFF;
   --mist: #F5F2F4;
@@ -9,6 +28,7 @@
   --rose: #903163;
   --slate: #969FA7;
   --line: #DCD5DA;
+  --field: #857A81;
 
   --btn-bg: #4D1434;
   --btn-fg: #FFFFFF;
@@ -38,6 +58,7 @@
     --rose: #F0A9C9;
     --slate: #7C858D;
     --line: #3A2E36;
+    --field: #8A7E86;
     --btn-bg: #E3B6CC;
     --btn-fg: #171115;
     --btn-bg-hover: #F0A9C9;
@@ -55,6 +76,7 @@
   --rose: #F0A9C9;
   --slate: #7C858D;
   --line: #3A2E36;
+  --field: #8A7E86;
   --btn-bg: #E3B6CC;
   --btn-fg: #171115;
   --btn-bg-hover: #F0A9C9;
@@ -369,11 +391,13 @@ sup.fn a:hover { text-decoration: underline; }
 .dg .t-node { fill: var(--ink); font-weight: 500; }
 .dg .d-flow, .dg .d-head { stroke: var(--plum); stroke-width: 2.5; }
 .dg .d-dot { fill: var(--plum); stroke: none; }
-.dg .d-grid { stroke: var(--slate); stroke-dasharray: 5 6; }
+.dg .d-grid { stroke: var(--ink-soft); stroke-dasharray: 5 6; }
 .dg .d-prompt, .dg .d-cursor { stroke: var(--plum); }
 .dg .d-wire { stroke-width: 1.5; }
 .dg .d-turbine circle { fill: var(--surface); }
 
+.facts-title { margin-top: clamp(40px, 6vw, 64px); }
+.plan-note { margin: 8px 0 20px; color: var(--ink-soft); }
 .facts { margin: 0; max-width: 760px; }
 .facts > div {
   display: grid;
@@ -440,6 +464,7 @@ sup.fn a:hover { text-decoration: underline; }
 .portrait { display: block; width: 100%; max-width: 320px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; background: var(--line); }
 .founder h3 { font-size: 1.5rem; }
 .role { margin: 4px 0 20px; color: var(--ink-soft); font-size: 0.875rem; }
+.note { margin-top: 20px; color: var(--ink-soft); font-size: 0.875rem; }
 @media (max-width: 759.98px) {
   .founder { grid-template-columns: 1fr; }
 }
@@ -456,7 +481,7 @@ sup.fn a:hover { text-decoration: underline; }
   width: 100%;
   min-height: 46px;
   padding: 10px 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--field);
   border-radius: 4px;
   background: var(--paper);
   color: var(--ink);
@@ -488,12 +513,18 @@ sup.fn a:hover { text-decoration: underline; }
 .sources li:target { color: var(--ink); }
 .sources a { overflow-wrap: anywhere; }
 .sources-title { margin: 40px 0 0; font: 600 1rem var(--font-head); }
-.copy { margin-top: 32px; color: var(--ink-soft); font-size: 0.875rem; }
+.legal { margin: 32px 0 0; color: var(--ink-soft); font-size: 0.875rem; }
+.copy { margin-top: 8px; color: var(--ink-soft); font-size: 0.875rem; }
 
 /* ---------------------------------------------------------------- message pages */
 
 .message { padding-block: clamp(64px, 12vw, 160px); min-height: 60vh; }
 .message p { margin-top: 20px; font-size: 1.1875rem; }
+.policy p { font-size: 1.0625rem; }
+.policy p.small { margin-top: 12px; font-size: 0.875rem; color: var(--ink-soft); }
+.policy h2 { margin-top: 48px; font-size: 1.375rem; }
+.policy h2 + p { margin-top: 12px; }
+.policy .mail-line { margin-top: 0; min-height: 1.6em; }
 
 /* ---------------------------------------------------------------- feedback motion (user-triggered or one-time) */
 

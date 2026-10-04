@@ -16,10 +16,12 @@ Then open http://localhost:8000/. Any static file server works.
 |---|---|
 | `index.html` | The one-page site |
 | `thanks.html` | Where the contact form lands when JavaScript is off |
+| `privacy.html` | Plain-language privacy notice |
 | `404.html` | Page shown for unknown addresses |
 | `assets/css/site.css` | All styles and colour tokens |
 | `assets/js/site.js` | Menu, hero animation, diagram and icon motion, contact form |
 | `assets/img/` | Logo, favicon, share image, headshot, icons |
+| `assets/fonts/` | Cabin and Inter (latin), with their SIL Open Font License texts |
 | `assets/source/` | Original logo image, for reference only |
 
 ## Contact form
@@ -43,6 +45,10 @@ If the address changes, update these:
 - the `url` and `logo` values in the structured data in `index.html`
 - the `redirect` value in the contact form
 - `sitemap.xml` and `robots.txt`
+
+## Privacy
+
+The site sets no cookies and loads nothing from other companies, so the only third party in play is Web3Forms, and only when someone sends a message. If anything is added that changes this (analytics, embeds, new fonts or scripts from another host), update `privacy.html`.
 
 ## Motion
 
