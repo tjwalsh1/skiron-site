@@ -1,0 +1,6 @@
+SITE_BRIEF.md
+*.pptx
+*.xlsx
+*.pdf
+skiron-private/
+.DS_Store
