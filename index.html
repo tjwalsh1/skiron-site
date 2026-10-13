@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Skiron | Wind-powered GPU compute in Iowa</title>
+<title>Skiron | Wind-Powered Midwestern Computing</title>
 <meta name="description" content="Skiron builds small GPU data centers at Midwestern wind farms, using wind power the grid can’t carry and renting that computing time to people building AI.">
 <link rel="canonical" href="https://tjwalsh1.github.io/skiron-site/">
 <meta name="color-scheme" content="light dark">
@@ -53,7 +53,6 @@
 </script>
 </head>
 <body>
-<!-- TODO(Thomas): have counsel review the finished site before the link is shared. -->
 <a class="skip" href="#main">Skip to content</a>
 <div class="bar bar--top" aria-hidden="true"><span></span><span></span><span></span></div>
 <header class="site-header">
@@ -61,9 +60,9 @@
     <a class="brand" href="#top"><svg class="mark" viewBox="140 20 1730 1960" width="28" height="32" aria-hidden="true" focusable="false"><g class="stk" fill="none" stroke="currentColor" stroke-width="58"><rect x="790" y="1263" width="420" height="122.8" rx="70"/><rect x="790" y="1441.8" width="420" height="122.8" rx="70"/><rect x="790" y="1620.5" width="420" height="122.8" rx="70"/><rect x="790" y="1799.2" width="420" height="122.8" rx="70"/></g><g transform="translate(1000 1072)"><g fill="currentColor" stroke="currentColor" stroke-width="22" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M-74 -1011 74 -899.6 74 0 -74 -0Z"/><path d="M-766 355.6 -788.6 539.4 36.9 64.1 -36.9 -64.1Z"/><path d="M848.4 398 678.1 471.3 -36.6 64.3 36.6 -64.3Z"/></g><circle r="150" style="fill:var(--surface,var(--paper,#fff))" stroke="currentColor" stroke-width="64"/></g></svg><span>Skiron</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="nav" aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#different">What sets us apart</a>
-      <a href="#founder">Founder</a>
+      <a href="#how">How Skiron works</a>
+      <a href="#different">How we're unique</a>
+      <a href="#founder">Founder info</a>
       <a class="btn" href="#contact">Get in touch</a>
     </nav>
   </div>
@@ -75,13 +74,13 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>Compute that runs on <span class="accent">Iowa wind.</span></h1>
-        <p class="lede">Skiron builds small GPU data centers beside Midwestern wind farms. They put wind power the grid can’t carry away to work, draw on the local utility the rest of the time, and rent that computing time to people building and running AI.</p>
+        <h1>Compute that runs on <span class="accent">Midwestern wind.</span></h1>
+        <p class="lede">Skiron aims to build small GPU data centers by Midwestern wind farms. They use excess wind power and the maximum wind power from the grid available. This is used to rent computing time to people building and running cloud systems.</p>
         <div class="actions">
           <a class="btn" href="#contact">Get in touch</a>
           <a class="textlink" href="#how">How it works</a>
         </div>
-        <p class="where">Based in Iowa City. Our first site is planned for an Iowa wind farm.</p>
+        <p class="where">Based in Iowa City, IA. Our first site is planned to be a Central/Eastern Iowa wind farm.</p>
       </div>
       <div class="hero-art">
 <svg class="logo" viewBox="140 20 1730 1960" role="img" aria-labelledby="logo-title">
@@ -135,11 +134,11 @@
 
 <section class="section section--mist" id="problem" aria-labelledby="problem-h">
   <div class="wrap split">
-    <div><h2 id="problem-h">Wind the grid can’t use</h2></div>
+    <div><h2 id="problem-h">We use excess power the grid must refuse</h2></div>
     <div class="prose">
       <p>On windy nights across the Midwest, turbines often make more electricity than the transmission lines can move. When that happens, the grid operator tells wind farms to turn down. The energy they give up is called curtailment. Iowa alone has 124 operating utility-scale wind farms.<sup class="fn"><a href="#source-4" aria-label="Source 4">4</a></sup></p>
-      <p>In MISO, the grid that serves Iowa and much of the Midwest, high wind output caused <span class="fig">almost half</span> of all transmission congestion in 2022. Wind curtailment averaged <span class="fig">726 megawatts</span> every hour that year and reached <span class="fig">5.9 gigawatts</span> in some hours.<sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup> MISO curtailment is on pace for a new record in 2026.<sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
-      <p>At the same time, demand for AI computing keeps growing, and the large data centers built to meet it can wait years for a grid connection.<sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup></p>
+      <p>In MISO, the grid that serves Iowa and much of the Midwest, high wind output caused <span class="fig">almost half</span> of all transmission congestion in 2022. Wind curtailment averaged <span class="fig">726 megawatts</span> every hour that year and reached <span class="fig">5.9 gigawatts</span> some hours.<sup class="fn"><a href="#source-1" aria-label="Source 1">1</a></sup> MISO curtailment is on pace for a new record in 2026.<sup class="fn"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
+      <p>At the same time, demand for AI computing continues to grow, new chips are limited in quantity, and the large data centers built to meet demand can wait a decade or more for a grid connection.<sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup></p>
     </div>
   </div>
 </section>
@@ -148,8 +147,8 @@
   <div class="wrap">
     <h2 id="how-h">How a Skiron site works</h2>
     <div class="how-lede">
-      <p>We build one compact building at a wind farm. Inside are used NVIDIA H100 GPU servers, cooling, and the electrical gear to run them. When the wind is strong and the lines are full, our servers put power the grid would turn away to work. The rest of the time, the site runs on service from the local utility.</p>
-      <p>We rent the computing time by the GPU-hour, mostly as single 8-GPU servers for fine-tuning and running AI models. Some goes to AI startups, researchers and developers through compute marketplaces. Some is sold in longer blocks to cloud providers who need steady capacity. Over time we plan to sign direct contracts with universities and businesses here in Iowa.</p>
+      <p>We build one compact building at a wind farm. Inside are used GPU servers, cooling, and the electrical gear to run them. When the wind is strong and the lines are full, our servers put power the grid would turn away to work. The rest of the time, the site runs on service from the local utility.</p>
+      <p>We rent the computing time by the GPU-hour, mostly as single 8-GPU servers for fine-tuning and running AI models. Some goes to AI startups, researchers and developers through compute marketplaces. Some is sold in longer blocks to cloud providers who need steady capacity. Over time, we plan to sign direct contracts with universities and businesses in the region to stable long-term cloud computing services.</p>
     </div>
 
     <figure class="diagram">
@@ -159,14 +158,14 @@
     </figure>
 
     <h3 class="facts-title" id="pilot-h">Pilot details</h3>
-    <p class="plan-note">Our first site is in planning. These are the current plans for it.</p>
+    <p class="plan-note">Our first site is in planning. These are the current plans for it:</p>
     <dl class="facts" aria-labelledby="pilot-h">
       <div><dt>Size</dt><dd>40 NVIDIA H100 GPUs in five 8-GPU servers</dd></div>
       <div><dt>Power draw</dt><dd>About 51 kW</dd></div>
       <div><dt>Building</dt><dd>Pole barn on a concrete slab</dd></div>
-      <div><dt>Time to running</dt><dd>10 to 16 weeks after the site and power agreement are signed</dd></div>
-      <div><dt>Operations</dt><dd>Remote monitoring, with Thomas on site within an hour</dd></div>
-      <div><dt>Cooling</dt><dd>Air-cooled; no water used for cooling</dd></div>
+      <div><dt>Time to power</dt><dd>10 to 16 weeks after the site and power agreement are signed</dd></div>
+      <div><dt>Operations</dt><dd>Remote monitoring, with staff on-site within an hour</dd></div>
+      <div><dt>Cooling</dt><dd>Air-cooled with no water used for cooling</dd></div>
       <div><dt>Location</dt><dd>An eastern Iowa wind farm within an hour of Iowa City; site selection underway</dd></div>
     </dl>
   </div>
@@ -179,17 +178,17 @@
       <div class="feature">
         <svg class="icon icon-turbine" viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true" focusable="false"><g class="i-rotor" transform="translate(24 25)"><g class="i-spin"><path d="M-3.2 -20.5 3.2 -15.5 3.2 0 -3.2 -0Z"/><path d="M18.7 7.1 11.1 10.1 -1.6 2.8 1.6 -2.8Z"/><path d="M-14.8 12.2 -13.6 4.2 -1.6 -2.8 1.6 2.8Z"/><circle class="i-hub" r="4.6"/></g></g></svg>
         <h3>Built at wind farms</h3>
-        <p>Every site sits at a wind farm and uses wind power the grid would otherwise turn away. The farm earns money from electricity it would have lost, and the rest of our power comes from the local utility. It’s renewable energy you can drive out and see.</p>
+        <p>Every site sits at a wind farm and uses wind power the grid would otherwise turn away. The farm earns money from electricity it would have lost, and the rest of our power comes from the local utility. Skiron aims to buy renewable wind certificates for as much power as possible to approach our target of fully-renewable power.</p>
       </div>
       <div class="feature">
         <svg class="icon icon-barn" viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true" focusable="false"><path d="M6 42V22.5L10.5 14.5 24 7l13.5 7.5L42 22.5V42z"/><path d="M6 22.5h36"/><g class="i-door"><path class="i-leaf i-leaf-l" d="M16 42V28.5h8V42"/><path class="i-leaf i-leaf-r" d="M24 42V28.5h8V42"/></g><path d="M21.5 18h5"/></svg>
         <h3>Small, so it’s fast</h3>
-        <p>A Skiron site is measured in kilowatts. That size fits within power capacity that’s already in place, so we skip the multi-year wait large data centers face for a grid connection and can be running within a season.<sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup></p>
+        <p>Skiron power consumption figures are measured in kilowatts while larger competitors measure their consumption in megawatts or gigawatts, several orders of magnitude larger. This means that Skiron sites fit within the grid's current capacity, so we skip the multi-year wait large data centers face for a grid connection and can be running within a season.<sup class="fn"><a href="#source-3" aria-label="Source 3">3</a></sup></p>
       </div>
       <div class="feature">
         <svg class="icon icon-plug" viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true" focusable="false"><rect class="i-socket" x="9" y="4" width="30" height="14" rx="2"/><path d="M18 9v4M30 9v4"/><g class="i-plug"><path d="M18 25v-7M30 25v-7"/><path d="M12.5 25h23v6.5a11.5 11.5 0 0 1-23 0z"/><path d="M24 43v4.5"/></g></svg>
         <h3>Lower-cost power</h3>
-        <p>Buying wind power during curtailment, when it would otherwise go unused, lowers what we pay for electricity. That helps us offer competitive prices at a small scale.</p>
+        <p>Buying wind power during curtailment, when it would otherwise go unused, lowers what we pay for electricity. That helps us offer competitive prices at a small scale, as does our used equipment and small footprint.</p>
       </div>
       <div class="feature">
         <svg class="icon icon-pin" viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true" focusable="false"><path d="M14 43h20"/><g class="i-pin"><path d="M24 41C24 41 11.5 29 11.5 19.5a12.5 12.5 0 0 1 25 0C36.5 29 24 41 24 41z"/><circle cx="24" cy="19.5" r="4.6"/></g></svg>
@@ -202,22 +201,22 @@
 
 <section class="section" id="neighbors" aria-labelledby="neighbors-h">
   <div class="wrap split">
-    <div><h2 id="neighbors-h">Built to be a good neighbor</h2></div>
+    <div><h2 id="neighbors-h">Built consciously</h2></div>
     <div class="prose">
-      <p>A lot of rural communities have watched proposals for enormous data centers and had fair questions about land, noise, water, and what happens to everyone’s power bill. We’ve heard those questions, and they shaped how Skiron works.</p>
-      <p>Each site is one farm-style building next to a wind farm that’s already there. A pilot site draws about 51 kW, small enough to fit within power capacity that’s already there, and it puts wind power the grid would otherwise turn away to use. We want every site to be one a county board is comfortable approving and a neighbor barely notices.</p>
-      <p>The pilot site is air-cooled. It uses no water for cooling.</p>
+      <p>Many rural communities have heard proposals for enormous data centers and raised concerns about land, noise, water, and power scarcity. Skiron has kept these pain points in mind, and they shape how Skiron develops a more equitable technological future.</p>
+      <p>Each site is one farm-style building next to a wind farm already in operation. Our proposed pilot site draws about 51 kW, small enough to fit within power capacity already there, and it uses excess wind power the grid would otherwise dispose of. We want every site to be favorable to rural America's concerns and to not disturb our neighbors.</p>
+      <p>The pilot site is air-cooled. It uses no water for cooling, unlike most large-capacity data centers raising issues of water usage and conservation.</p>
     </div>
   </div>
 </section>
 
 <section class="section section--mist" id="roadmap" aria-labelledby="roadmap-h">
   <div class="wrap split">
-    <div><h2 id="roadmap-h">Where this goes</h2></div>
+    <div><h2 id="roadmap-h">How we grow from here:</h2></div>
     <ol class="steps" role="list">
-      <li><div><strong>The pilot.</strong> One 40-GPU site at an Iowa wind farm, built to prove the model in the field.</div></li>
-      <li><div><strong>More farms.</strong> Additional sites across MISO wind country, with newer and more powerful GPUs.</div></li>
-      <li><div><strong>Long-term customers.</strong> SOC 2 security certification and multi-year contracts with universities, Iowa businesses and larger technology buyers.</div></li>
+      <li><div><strong>The Pilot</strong> One 40-GPU site at an Iowa wind farm to prove that environmentally-conscious computing can be profitable.</div></li>
+      <li><div><strong>More Farms</strong> Additional sites across the Midwest and South, with newer and more powerful GPUs.</div></li>
+      <li><div><strong>Long-Term Customers</strong> SOC 2 security certification will open up multi-year contracts with universities, regional businesses, and larger technology buyers.</div></li>
     </ol>
   </div>
 </section>
@@ -230,11 +229,11 @@
       <div>
         <h3>Thomas Walsh</h3>
         <p class="role">Founder and CEO</p>
-        <!-- TODO(Thomas): add the award name and year for Litia (the copy says both ventures are award-winning), and anything from LinkedIn worth adding. -->
-        <p>Thomas has spent eight years building and repairing computer hardware and four years in manufacturing and engineering work during and after high school. He has founded two award-winning education technology ventures, Pin Intelligence and Litia. Pin Intelligence earned an award at the University of Alabama BIG Ideas Competition in 2025.</p>
-        <p>He is a second-year student at Northwestern Pritzker School of Law. He has worked as a summer associate at Belin McCormick in Des Moines and is an incoming M&amp;A summer associate at Cooley in Chicago. He lives in Iowa City, within a few hours’ drive of the wind country where Skiron’s first sites will go.</p>
-        <p><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">Thomas on LinkedIn</a></p>
-        <p class="note">Skiron is Thomas’s independent venture. It is not affiliated with or endorsed by Northwestern University, Cooley or Belin McCormick.</p>
+        <p>Thomas has spent eight years building and repairing computer hardware and four years in manufacturing and engineering work during/after high school. As an undergraduate at the University of Alabama, he studied economics and political science; he is now a law student at Northwestern University. He has founded two education technology ventures, Pin Intelligence and Litia. Pin Intelligence earned an award at the University of Alabama BIG Ideas Competition in 2025.</p>
+        <p>He is a second-year student at Northwestern Pritzker School of Law. He has worked as a summer associate at Belin McCormick in Des Moines and is an incoming M&A summer associate at a BigLaw firm in Chicago. He lives in Iowa City with his wife and daughter, surrounded by the wind country where Skiron's first sites will go.</p>
+        <p>In his spare time, Thomas is also a competitive triathlete, strategy game enjoyer, amateur mechanic, and hobbyist programmer.</p>
+        <p><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">Connect on LinkedIn</a></p>
+        <p class="note">Skiron is Thomas's independent venture. It is not affiliated with or endorsed by any university, any law firm, any technology business, any energy provider, or any utility company.</p>
       </div>
     </div>
   </div>
@@ -244,10 +243,9 @@
   <div class="wrap split">
     <div>
       <h2 id="contact-h">Get in touch</h2>
-      <p class="contact-intro">Wind farm operators, landowners, researchers and teams who need GPU computing time, or anyone who wants to learn more about Skiron: send a note and Thomas will reply personally.</p>
+      <p class="contact-intro">Wind farm operators, landowners, researchers, and teams who need GPU computing time, or anyone who wants to learn more about Skiron should not hesitate to reach out.</p>
     </div>
     <div>
-      <!-- TODO(Thomas): create the Web3Forms access key (see README) and replace REPLACE_WITH_WEB3FORMS_KEY here and in assets/js/site.js. -->
       <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
         <input type="hidden" name="subject" value="New message from the Skiron website">
@@ -278,9 +276,7 @@
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </div>
       </form>
-      <p class="note">When you send a message, your name, email, organization and note go to Thomas by email through a form service. <a href="privacy.html">Privacy details</a></p>
-      <!-- TODO(Thomas): choose a domain name and a Skiron email address. Then change the destination in the Web3Forms dashboard and update the canonical, og:url, sitemap and form redirect. -->
-      <p class="mail-alt">Prefer email? <a class="js-mail" href="#contact" hidden></a><noscript>thomas.walsh@law.northwestern.edu</noscript></p>
+      <p class="note">When you send a message, your name, email, organization and note go by email through a form service. <a href="privacy.html">Privacy details</a></p>
     </div>
   </div>
 </section>
@@ -291,8 +287,7 @@
   <div class="bar" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="footer-top">
-      <!-- TODO(Thomas): no legal entity exists yet. Once it is formed, update the footer name and copyright line, the structured data in the head, and "Who runs this site" on the privacy page. -->
-      <p class="footer-name">Skiron Technology, Iowa City, Iowa</p>
+      <p class="footer-name">Skiron Technology, Iowa City, IA</p>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">LinkedIn</a></li>
         <li><a href="#contact">Get in touch</a></li>
