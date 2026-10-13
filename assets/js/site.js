@@ -215,8 +215,8 @@
     var button = $('button[type="submit"]', form);
     var sendLabel = button.textContent;
     var keyField = form.elements.access_key;
-    var key = WEB3FORMS_KEY !== 'REPLACE_WITH_WEB3FORMS_KEY' ? WEB3FORMS_KEY : (keyField ? keyField.value : '');
-    var connected = key && key !== 'REPLACE_WITH_WEB3FORMS_KEY';
+    var key = WEB3FORMS_KEY !== '395b4aac-2902-45e9-8675-f9e6960a4dae' ? WEB3FORMS_KEY : (keyField ? keyField.value : '');
+    var connected = key && key !== '395b4aac-2902-45e9-8675-f9e6960a4dae';
     var checked = ['name', 'email', 'message'];
     var messages = {
       name: { valueMissing: 'Please enter your name.' },
