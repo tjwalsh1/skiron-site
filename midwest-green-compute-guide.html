@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Midwestern Wind-Powered Computing, Green AI and Cloud Resources | Skiron</title>
+<meta name="description" content="A plain-language guide to wind-powered computing, green AI infrastructure, data center ethics and Midwestern AI and cloud resources, from Skiron in Iowa City, IA.">
+<meta name="keywords" content="wind-powered computing, green AI, sustainable data centers, Midwest cloud computing, Midwest AI resources, GPU cloud, renewable energy, curtailment, data center ethics, Iowa, research computing, clean energy computing">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://tjwalsh1.github.io/skiron-site/midwest-green-compute-guide.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171115" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Skiron Technology">
+<meta property="og:title" content="Wind-Powered Computing, Green AI and Midwestern Cloud Resources: A Heartland Guide">
+<meta property="og:description" content="A plain-language guide to wind-powered computing, green AI infrastructure, data center ethics and Midwestern AI and cloud resources, from Skiron in Iowa City, IA.">
+<meta property="og:url" content="https://tjwalsh1.github.io/skiron-site/midwest-green-compute-guide.html">
+<meta property="og:image" content="https://tjwalsh1.github.io/skiron-site/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Skiron. Compute that runs on Iowa wind.">
+<meta property="article:published_time" content="2026-10-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wind-Powered Computing, Green AI and Midwestern Cloud Resources: A Heartland Guide">
+<meta name="twitter:description" content="A plain-language guide to wind-powered computing, green AI infrastructure, data center ethics and Midwestern AI and cloud resources, from Skiron in Iowa City, IA.">
+<meta name="twitter:image" content="https://tjwalsh1.github.io/skiron-site/assets/img/og-image.png">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cabin-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/guide.css">
+<script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
+<script src="assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Wind-Powered Computing, Green AI and Midwestern Cloud Resources: A Heartland Guide",
+      "description": "A plain-language guide to wind-powered computing, green AI infrastructure, data center ethics and Midwestern AI and cloud resources, from Skiron in Iowa City, IA.",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": "https://tjwalsh1.github.io/skiron-site/midwest-green-compute-guide.html",
+      "image": "https://tjwalsh1.github.io/skiron-site/assets/img/og-image.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Skiron Technology",
+        "url": "https://tjwalsh1.github.io/skiron-site/",
+        "logo": "https://tjwalsh1.github.io/skiron-site/assets/img/apple-touch-icon.png"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skiron Technology",
+        "url": "https://tjwalsh1.github.io/skiron-site/",
+        "logo": "https://tjwalsh1.github.io/skiron-site/assets/img/apple-touch-icon.png"
+      },
+      "keywords": "wind-powered computing, green AI, sustainable data centers, Midwest cloud computing, Midwest AI resources, GPU cloud, renewable energy, curtailment, data center ethics, Iowa, research computing, clean energy computing",
+      "about": [
+        "Wind power",
+        "Curtailment",
+        "Green computing",
+        "Data center ethics",
+        "Midwestern United States",
+        "Cloud computing",
+        "Artificial intelligence"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is wind-powered computing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wind-powered computing means running servers, such as GPU machines for AI, on electricity generated by wind turbines. The strongest version places the servers next to a wind farm so that they can use energy that the grid would otherwise turn away. It cuts the carbon intensity of the computing and puts surplus clean energy to productive use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is curtailment and why does it happen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Curtailment is a reduction in a power plant's output below what it could produce. It happens when the transmission lines near a wind farm are full or when the grid cannot use all the available power at that moment. In MISO, the grid operator for much of the Midwest, wind curtailment averaged 726 megawatts every hour in 2022 and reached 5.9 gigawatts in some hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why build a data center at a wind farm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Electricity is costly to move over long distances when lines are congested, but data travels easily over fiber. A data center at the wind farm can use power on the spot and send results anywhere. The wind farm earns money from electricity it would have lost, and the computing customer benefits from lower-cost, lower-carbon power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much power does a small GPU data center use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single 8-GPU server can draw on the order of ten kilowatts under heavy load. Skiron's planned pilot site, with five such servers holding 40 GPUs, is expected to draw about 51 kilowatts. For comparison, the largest AI campuses plan for hundreds of megawatts or more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a data center beside a wind farm run on 100 percent wind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily, and an honest provider will say so. The wind does not blow every hour. Skiron's plan is to use wind power the grid would otherwise turn away, draw on the local utility the rest of the time, and aim to buy renewable wind certificates for as much of that power as possible, with fully renewable power as the target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is air cooling really water-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Air-cooled systems reject heat into the outside air with fans and heat exchangers, so they do not evaporate water to cool the equipment. They may use somewhat more electricity on very hot days. Skiron's planned pilot site is air-cooled and uses no water for cooling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a GPU-hour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A GPU-hour is one graphics processing unit used for one hour. It is the standard way to measure and rent AI computing. Eight GPUs running for three hours is twenty-four GPU-hours. Providers often rent GPUs by the hour, frequently as an entire 8-GPU server at a time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I run on a single 8-GPU server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single 8-GPU server can fine-tune many open-weight language models, run inference for a regional business, train computer vision models, process scientific datasets, and support classroom or research projects. Very large training runs that span thousands of GPUs need much bigger clusters, but a great deal of valuable AI work fits on one server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can Midwestern university researchers get GPU time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with your campus research computing center, which often provides free accounts to faculty, staff and students. If you need more, apply for an allocation through national programs such as NSF ACCESS and the National AI Research Resource, which include GPU systems in Illinois and Indiana. For workloads made of many independent tasks, the Open Science Pool is free to U.S. academic, government and non-profit users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there free GPU resources for Midwestern students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many campus clusters offer free accounts to enrolled students, often through a faculty sponsor. National programs also support educational use. Ask your institution's research computing or IT office what is available and whether a workshop is scheduled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cloud regions are in the Midwest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Cloud's us-central1 region is in Council Bluffs, Iowa. Microsoft Azure's Central US region is in Iowa, and Azure also has a North Central US region in Illinois. Amazon Web Services operates its US East (Ohio) region, us-east-2. Chicago and Columbus are major data center and network hubs. Check each provider's current region list for details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does location matter for the carbon footprint of AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The same computation produces very different emissions depending on the electricity mix of the grid that powers it. A job running mostly on wind power generates far less carbon dioxide than the same job running mostly on coal. Siting computing where clean power is abundant, and being transparent about the mix, is one of the most effective ways to make AI greener."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is PUE and what is a good value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Power usage effectiveness (PUE) is the total energy a facility uses divided by the energy used by its computing equipment. Lower is better, and 1.0 is the theoretical minimum. An industry survey reported an average of about 1.56 in 2024, while well-designed modern facilities, particularly in cool climates, can achieve noticeably lower numbers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do data centers affect local electric bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the project. The key questions are who pays for the grid upgrades a new load requires, what rate the facility pays, and whether new clean generation is added or surplus power is used. A small facility that fits within existing capacity and uses energy that would otherwise be curtailed is less likely to require costly new infrastructure. Residents are right to ask for these details in writing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many jobs does a data center create?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Data centers are capital-intensive and typically employ relatively few people once they are built. The local benefits usually come from construction, ongoing maintenance and electrical work, lease payments to landowners, local purchasing, property taxes, and training opportunities. Honest developers describe those benefits plainly rather than promising large numbers of permanent jobs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a county board ask a data center developer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask how much power the site will draw, how it connects to the grid, how it is cooled, how much water it will use, what noise levels to expect at the property line, how many people will work there, what local contracts are planned, what happens at the end of the project, and who neighbors can contact. The checklist in the data center ethics section above covers these points."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is data residency and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Data residency is the requirement or preference that data be stored and processed in a specific country, state or region. It matters for legal compliance, customer trust and latency. Regional cloud providers and regions located in the Midwest make it easier to keep data close to the organizations that own it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between training, fine-tuning and inference?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Training builds a model from scratch on a very large dataset and needs the most computing. Fine-tuning adapts an existing model to a specific task using far less computing. Inference is using a trained model to produce answers or predictions. Fine-tuning and inference make up a large share of everyday AI work and fit well on small, regionally located GPU servers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are renewable energy certificates and are they enough?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Renewable energy certificates (RECs) represent the environmental attributes of one megawatt-hour of renewable electricity. Buying them is a recognized way to support renewable generation and to match consumption on paper. They are most meaningful when paired with clear reporting on how closely the renewable generation matches the time and place of the computing, and with efforts to use clean power directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why use previously deployed GPU servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Using servers that have already been manufactured spreads their embodied carbon across more years of useful work, reduces electronic waste, and lowers the cost of capacity. Enterprise GPU servers are built to run for years, and many can continue to do valuable fine-tuning, inference and research work long after they leave the very top of the market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a small data center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies with the site, the permits and the equipment. Skiron's current plan for its pilot site is 10 to 16 weeks after the site and power agreement are signed. Very large data centers can wait years for a grid connection, which is one reason small sites that fit within existing electrical capacity are attractive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the Midwest offer AI companies that other regions do not?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Midwest combines abundant wind energy, available land, lower costs, a strong base of universities and research computing centers, a skilled and practical workforce, and communities that expect responsible development. That combination supports sustainable, community-first AI infrastructure and regional cloud capacity close to customers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Skiron based and how can I reach the company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skiron Technology is based in Iowa City, IA. The company is planning its first site at a central or eastern Iowa wind farm. You can reach Skiron through the contact form on the home page, and Skiron will respond."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Skiron affiliated with the organizations named in this guide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Skiron is not affiliated with, sponsored by or endorsed by any university, laboratory, government program, cloud provider, hardware maker or other organization named in this guide. They are mentioned only as publicly available resources, and their programs and eligibility rules are set by them."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar bar--top" aria-hidden="true"><span></span><span></span><span></span></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="120 55 1780 1930" width="29" height="32" aria-hidden="true" focusable="false"><g class="stk" fill="none" stroke="currentColor" stroke-width="58"><rect x="790" y="1263" width="420" height="122.8" rx="70"/><rect x="790" y="1441.8" width="420" height="122.8" rx="70"/><rect x="790" y="1620.5" width="420" height="122.8" rx="70"/><rect x="790" y="1799.2" width="420" height="122.8" rx="70"/></g><g transform="translate(1000 1072)"><g fill="currentColor" stroke="currentColor" stroke-width="22" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M-74 -965.9 74 -854.7 74 0 -74 -0Z"/><path d="M-776.9 361.9 -800.4 546.2 36.9 64.1 -36.9 -64.1Z"/><path d="M875.8 413.6 706.2 487.3 -36.6 64.3 36.6 -64.3Z"/></g><circle r="150" style="fill:var(--surface,var(--paper,#fff))" stroke="currentColor" stroke-width="64"/></g></svg><span>Skiron</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#different">What sets us apart</a>
+      <a href="index.html#founder">Founder</a>
+      <a class="btn" href="index.html#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="guide">
+  <div class="wrap">
+    <article class="guide-inner">
+<header>
+<h1>Wind-Powered Computing, Green AI and Midwestern Cloud Resources: A Heartland Guide</h1>
+<p class="dek">How wind energy, GPU cloud computing and responsible data center design fit together in the American Midwest, with a practical directory of regional AI, research computing and cloud resources.</p>
+<p class="byline">Published October 13, 2026 by Skiron Technology, Iowa City, IA</p>
+</header>
+
+<nav class="guide-toc" aria-labelledby="toc-h">
+<h2 id="toc-h">In this guide</h2>
+<ol>
+<li><a href="#overview">Overview: why this guide exists</a></li>
+<li><a href="#why-midwest">Why the Midwest is the natural home for sustainable computing</a></li>
+<li><a href="#wind-curtailment-grid">Wind power, curtailment and the grid, explained</a></li>
+<li><a href="#green-computing">Green AI and sustainable computing, explained</a></li>
+<li><a href="#data-center-ethics">Data center ethics: building technology that deserves a place in the community</a></li>
+<li><a href="#midwest-innovation">Midwestern innovation: from the first electronic computers to the heartland AI economy</a></li>
+<li><a href="#midwest-ai-cloud-resources">Midwestern AI and cloud resources: a practical directory</a></li>
+<li><a href="#skiron-approach">How Skiron approaches wind-powered computing</a></li>
+<li><a href="#future-optimism">The optimistic case: a heartland built for the next century of computing</a></li>
+<li><a href="#topics">Topics at a glance</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+<li><a href="#glossary">Glossary of wind, computing and data center terms</a></li>
+<li><a href="#sources">Sources and further reading</a></li>
+</ol>
+</nav>
+
+<section id="overview" aria-labelledby="overview-h">
+<h2 id="overview-h">Overview: why this guide exists</h2>
+<p>This guide is a plain-language reference on wind-powered computing, green AI infrastructure, responsible data center development and the practical cloud and AI resources available across the American Midwest. It is written for people who are deciding where to run their computing, where to build it, or how to think about it: founders and developers building AI products, university researchers and graduate students, county board members and landowners, wind farm operators, manufacturers, farmers, teachers, and anyone curious about how the heartland can lead the next era of sustainable technology.</p>
+<p>The Midwest has an unusual combination of assets. It has some of the best onshore wind resources in the country, a long tradition of engineering and agricultural technology, land-grant research universities with deep high-performance computing programs, affordable land, a skilled workforce, and communities that are paying close attention to what a new data center would mean for them. When those assets line up, the region can offer clean energy computing, community-first data center design and regional cloud capacity that keeps both the economic activity and the carbon accounting close to home.</p>
+<p>The guide is organized so that you can read it straight through or jump to the part you need. The sections on <a href="#wind-curtailment-grid">wind power, curtailment and the grid</a> and <a href="#green-computing">green AI and sustainable computing</a> explain the energy side. The section on <a href="#data-center-ethics">data center ethics</a> covers the questions rural communities are right to ask. The section on <a href="#midwest-ai-cloud-resources">Midwestern AI and cloud resources</a> is the most practical part, with a directory of research computing centers, national programs, commercial cloud regions and a set of checklists. The <a href="#faq">FAQ</a> and <a href="#glossary">glossary</a> at the end are meant for quick lookups.</p>
+<h3>Key facts at a glance</h3>
+<ul>
+<li>Wind turbines produced about 63 percent of the electricity generated in Iowa in 2024, the highest wind share of any state, according to the U.S. Energy Information Administration.<sup class="fn"><a href="#ref-5" aria-label="Source 5">5</a></sup></li>
+<li>Iowa passed what is widely described as the first state renewable portfolio standard in the country in 1983, long before wind was a mainstream power source.<sup class="fn"><a href="#ref-9" aria-label="Source 9">9</a></sup></li>
+<li>Iowa alone has 124 operating utility-scale wind farms.<sup class="fn"><a href="#ref-4" aria-label="Source 4">4</a></sup></li>
+<li>In MISO, the grid operator that serves Iowa and much of the Midwest, wind curtailment averaged 726 megawatts every hour in 2022 and reached 5.9 gigawatts in some hours.<sup class="fn"><a href="#ref-1" aria-label="Source 1">1</a></sup></li>
+<li>Data centers used about 4.4 percent of U.S. electricity in 2023, and a national laboratory analysis projects that share could reach 6.7 to 12 percent by 2028.<sup class="fn"><a href="#ref-6" aria-label="Source 6">6</a></sup></li>
+<li>Worldwide, data centers used roughly 415 terawatt-hours of electricity in 2024, about 1.5 percent of the global total, and the International Energy Agency expects that to more than double by 2030.<sup class="fn"><a href="#ref-7" aria-label="Source 7">7</a></sup></li>
+<li>Many Midwestern universities offer free or low-cost research computing to their own faculty and students, and several national programs open large GPU systems in Illinois, Indiana and elsewhere to researchers across the country.</li>
+</ul>
+<p>Skiron is a small company in Iowa City, IA that plans to build compact GPU data centers beside Midwestern wind farms. Skiron wrote this guide because the questions it answers come up constantly in conversations with landowners, researchers, county officials and AI builders, and because a clear, honest reference is useful whether or not anyone ever rents a single GPU-hour from Skiron.</p>
+</section>
+
+<section id="why-midwest" aria-labelledby="why-midwest-h">
+<h2 id="why-midwest-h">Why the Midwest is the natural home for sustainable computing</h2>
+<p>For most of the history of the internet, the physical machinery of the cloud has clustered in a handful of places: northern Virginia, a few coastal metropolitan areas, and a growing list of large campuses built wherever a utility could promise a very large block of power. That model is straining. Large AI data centers are asking for hundreds of megawatts at a time, transmission lines are congested, interconnection queues are long, and many communities are understandably wary of proposals they did not ask for. A growing body of industry analysis describes grid connection as the single biggest constraint on new data center capacity.<sup class="fn"><a href="#ref-3" aria-label="Source 3">3</a></sup></p>
+<p>The Midwest offers a different pattern. The region is already home to the energy that clean computing needs. Wind farms spread across Iowa, Minnesota, Illinois, the Dakotas, Nebraska, Kansas and neighboring states generate large amounts of electricity, often at night and in the shoulder seasons when demand is lowest. That mismatch between when the wind blows and when the grid can use it is one of the great untapped opportunities in American energy, and it is the starting point for the idea behind wind-powered GPU cloud capacity.</p>
+<h3>Wind country is also data country</h3>
+<p>The Midwest is not only a place where energy is produced. It is a place where data is produced and put to work. Precision agriculture generates imagery, sensor streams and yield records at enormous scale. Manufacturing plants from Ohio to Minnesota run machine vision, predictive maintenance and quality control. Hospital systems and university medical centers across the region hold clinical data that could power better diagnostics. Insurance, logistics and financial services firms in Des Moines, Chicago, Omaha, Kansas City, Indianapolis and Columbus run analytics every day. All of this creates local demand for AI computing and for cloud capacity located nearby.</p>
+<p>Keeping that computing close to home has practical benefits. Lower network latency helps interactive applications. Data residency is simpler when the servers are in the same state or region as the customer. Regional cloud capacity can be paired with regional expertise, so a manufacturer in eastern Iowa or a research lab in Wisconsin can talk to a provider who understands their setting. And the economic activity of operating the facility, from construction to maintenance to local purchasing, stays in the community that hosts it.</p>
+<h3>Heartland values, clean energy results</h3>
+<p>Midwestern communities tend to judge new projects by a few durable questions. Will it be a good neighbor? Will it use our resources fairly? Will the people who run it be accountable and reachable? Will it still make sense in twenty years? Those questions line up well with the best practices in sustainable technology: right-sizing facilities to the power that is actually available, using efficient hardware, avoiding unnecessary water use, being transparent about energy sourcing, and designing for the long term. A region that insists on those standards helps set a national example for responsible AI infrastructure.</p>
+<h3>The case for smaller, faster, closer</h3>
+<p>Not every AI workload needs a billion-dollar campus. Fine-tuning an open-weight language model, running inference for a regional business, training a computer vision model for a farm equipment maker, or giving a university lab a few nodes for a semester are all tasks that fit comfortably on a few racks of modern GPU servers. A facility that draws tens of kilowatts instead of hundreds of megawatts can often fit within electrical capacity that already exists at a site, which means it can be built in months rather than years.<sup class="fn"><a href="#ref-3" aria-label="Source 3">3</a></sup> Small and mid-sized sites also have a gentler footprint on land, noise, water and the surrounding grid. They are easier for a county board to evaluate and easier for neighbors to live beside.</p>
+<p>This is the heart of the Midwestern approach to green AI: match the scale of the facility to the scale of the opportunity, put it where clean power is abundant, and make it accountable to the people who live nearby.</p>
+</section>
+
+<section id="wind-curtailment-grid" aria-labelledby="wind-curtailment-grid-h">
+<h2 id="wind-curtailment-grid-h">Wind power, curtailment and the grid, explained</h2>
+<p>To understand why wind-powered computing makes sense, it helps to understand a few basic ideas about how the electric grid works and why renewable energy sometimes goes unused. This section walks through those ideas in plain terms.</p>
+<h3>How wind farms produce power</h3>
+<p>A modern utility-scale wind turbine converts the kinetic energy of moving air into electricity. Output rises quickly as wind speed increases, reaches the turbine's rated capacity at a moderate wind speed, and holds there until the wind becomes so strong that the machine feathers its blades to protect itself. Because output depends on the cube of wind speed in the lower range of the power curve, small changes in wind produce large changes in generation. Over a full year, a good Midwestern wind farm may produce somewhere around a third to nearly half of what it would make if it ran at full rated power every hour. That ratio is called the capacity factor, and the best Midwestern sites are among the strongest in the country.</p>
+<p>Wind in the central United States tends to be strongest at night and in the cooler months, which is partly why it pairs so well with solar in a mixed grid, and partly why it can overshoot demand. When the wind is strong and the overnight load is low, a wind farm can produce more power than nearby customers are using.</p>
+<h3>The grid has to balance every second</h3>
+<p>The electric grid has no meaningful bulk storage. At every moment, the amount of electricity put onto the wires must match the amount being used. Grid operators such as MISO, the Midcontinent Independent System Operator, and SPP, the Southwest Power Pool, coordinate generators across many states to keep that balance. They also manage the physical limits of the transmission system: each line, transformer and interface can carry only so much power before it risks overheating or becoming unstable.</p>
+<h3>What curtailment means</h3>
+<p>Curtailment is a reduction in a power plant's output below what it could produce. When there is more wind generation in an area than the transmission lines can carry away, or more than the system can use at that moment, the grid operator tells wind farms to turn down. The energy those turbines could have produced is simply lost. It is renewable electricity that never reaches anyone.</p>
+<p>The scale is substantial. In MISO, high wind output caused almost half of all transmission congestion in 2022. Wind curtailment in the region averaged 726 megawatts every hour that year and reached 5.9 gigawatts in some hours.<sup class="fn"><a href="#ref-1" aria-label="Source 1">1</a></sup> Analysts report that curtailment in the region is on pace for a new record in 2026, as new generation and new demand both arrive faster than new transmission.<sup class="fn"><a href="#ref-2" aria-label="Source 2">2</a></sup></p>
+<h3>Congestion and the transmission bottleneck</h3>
+<p>Congestion is the technical term for a transmission constraint that prevents the cheapest available power from reaching all the places that want it. A congested corridor can leave wind farms on one side of a bottleneck with electricity they cannot sell, while customers on the other side pay more for power from a different source. Building new high-voltage transmission is essential, but it is slow. Permitting, securing easements across private property, cost sharing among states and construction commonly take many years.</p>
+<p>In the meantime, the energy that wind farms give up during congested hours represents both an economic loss for the farm and an environmental loss for everyone, because clean electricity that could have displaced fossil generation is wasted. Finding productive local uses for that energy is one of the practical ways to improve the economics of wind and reduce the carbon intensity of new computing at the same time.</p>
+<h3>Negative prices and the economics of surplus</h3>
+<p>When there is more supply than demand, wholesale electricity prices at a location can fall to zero or even below zero. Wind farms with production tax credits and long-term contracts may keep generating through low or negative prices, which is one reason local congestion can become severe. For a nearby customer who can use electricity at exactly those moments, the power is cheap and, in the right circumstances, carbon-light. This is the market signal behind the idea of placing power-hungry equipment where the surplus occurs.</p>
+<h3>Interconnection queues and time to power</h3>
+<p>Connecting a new large load to the grid, whether a factory, a data center or a hospital campus, requires studies, equipment and often new substations. For very large data centers, developers can wait years for a utility to energize a site. That delay is now widely discussed in the industry as the time-to-power problem.<sup class="fn"><a href="#ref-3" aria-label="Source 3">3</a></sup> It is one reason smaller facilities that fit within existing electrical capacity are attractive: a site measured in kilowatts can often be energized in a season, rather than waiting years for new transmission.</p>
+<h3>Behind the numbers: units that matter</h3>
+<p>Energy writing is full of units, and a short refresher makes the rest of this guide easier to follow. A kilowatt (kW) is a thousand watts, a measure of power at a moment in time. A megawatt (MW) is a thousand kilowatts, and a gigawatt (GW) is a thousand megawatts. A kilowatt-hour (kWh) is the energy used by drawing one kilowatt for one hour. A typical Midwestern home uses roughly ten thousand kilowatt-hours a year. A single modern 8-GPU AI server can draw on the order of ten kilowatts while it is working hard, so a small cluster of five such servers draws roughly fifty kilowatts, about as much as a handful of large workshops or a small grain facility. By contrast, the largest AI campuses plan for hundreds of megawatts to several gigawatts, which is the scale of whole cities.</p>
+<h3>Why putting computing next to wind makes physical sense</h3>
+<p>Electricity is easy to use right where it is made and costly to move far. Computing has the opposite property: the product is information, which travels through fiber at nearly the speed of light for almost no cost. A GPU server beside a wind farm turns surplus electrons into trained models, inference results, simulations and analysis, then ships those results to anywhere on earth over an ordinary fiber connection. Instead of building a very long transmission line to carry curtailed power to a distant customer, the customer connects over fiber to servers that sit beside the power. This is the core physical insight behind wind-powered data centers, and it is the reason the Midwest, with its abundant wind and widening fiber networks, is such a promising location.</p>
+</section>
+<section id="green-computing" aria-labelledby="green-computing-h">
+<h2 id="green-computing-h">Green AI and sustainable computing, explained</h2>
+<p>Artificial intelligence is one of the most computing-intensive technologies in common use, and the energy it consumes has become a central topic in technology, policy and community life. This section explains the main ideas behind green computing and sustainable AI infrastructure, so that you can ask good questions of any provider, including Skiron.</p>
+<h3>How much electricity do data centers use?</h3>
+<p>The numbers are large and growing. A national laboratory study commissioned by the U.S. Department of Energy found that data centers used about 176 terawatt-hours of electricity in 2023, roughly 4.4 percent of all electricity consumed in the United States, up from about 58 terawatt-hours in 2014. The same study projects that by 2028 data centers could use between 6.7 and 12 percent of U.S. electricity, depending on how fast AI adoption grows.<sup class="fn"><a href="#ref-6" aria-label="Source 6">6</a></sup> Globally, the International Energy Agency estimated data center consumption at roughly 415 terawatt-hours in 2024, about 1.5 percent of world electricity, and expects it to reach around 945 terawatt-hours by 2030, with AI the most important driver.<sup class="fn"><a href="#ref-7" aria-label="Source 7">7</a></sup></p>
+<p>Those projections are the reason where and how new computing is powered matters so much. If a rapidly growing share of electricity goes to computing, then the carbon intensity and the grid impact of that computing become matters of national significance.</p>
+<h3>Training and inference</h3>
+<p>AI workloads fall into two broad groups. Training builds a model by adjusting billions of numerical parameters across huge datasets, which can take many GPUs running for days or weeks. Fine-tuning adapts an existing model to a particular task or dataset with far less computing. Inference is the everyday use of a trained model to answer questions, classify images, transcribe audio or generate text. Over the life of a popular model, inference often accounts for most of the total energy, because it runs continuously for many users, while training happens once.</p>
+<p>This distinction matters for regional cloud capacity. A great deal of useful AI work, including fine-tuning open models, serving inference for regional businesses, running scientific simulations and processing agricultural or industrial data, does not require a hyperscale campus. It requires reliable, well-maintained GPU servers with good network connections, and it can run on a modest number of nodes.</p>
+<h3>GPUs, accelerators and why they draw so much power</h3>
+<p>Graphics processing units, or GPUs, are specialized processors that perform enormous numbers of arithmetic operations in parallel, which is exactly what neural networks need. Modern data center GPUs are among the most power-dense devices in computing. A single high-end accelerator can draw several hundred watts, and a server that holds eight of them, along with processors, memory, networking and fans, can draw about ten kilowatts. Racks of these machines concentrate a great deal of heat in a small space, which is why cooling design matters so much.</p>
+<h3>Power usage effectiveness (PUE)</h3>
+<p>Power usage effectiveness, or PUE, is the standard ratio for how much of a facility's energy goes to the computing equipment itself versus overhead such as cooling and power conversion. It is the total facility energy divided by the energy used by the IT equipment. A PUE of 1.0 would mean every watt goes to computing; a PUE of 1.5 means that for every watt of computing, half a watt goes to overhead. The Uptime Institute's annual global survey put the industry average at about 1.56 in 2024, essentially unchanged for five years, even as the newest large facilities do much better.<sup class="fn"><a href="#ref-8" aria-label="Source 8">8</a></sup> Small facilities in cool climates that use outside air can achieve very good numbers when designed carefully, and the Midwest's cold winters help.</p>
+<h3>Water usage effectiveness (WUE) and cooling choices</h3>
+<p>Many data centers cool their equipment by evaporating water, which can be efficient in energy terms but consumes large volumes of water, often drawn from the same municipal or aquifer supplies that communities depend on. Water usage effectiveness, or WUE, measures liters of water used per kilowatt-hour of computing energy. Air-cooled designs reject heat directly into the outside air using fans and heat exchangers and use no water for cooling. They may use a little more electricity on the hottest days, but they remove a major source of community concern, particularly in regions that care about aquifers, drought resilience and agricultural water needs. Liquid cooling, using closed loops that do not evaporate water, is another path, and it becomes more important as chips get denser.</p>
+<p>Skiron's planned pilot site is air-cooled and uses no water for cooling, which is one of the reasons the design fits comfortably in a rural setting.</p>
+<h3>Carbon intensity, location and the electricity mix</h3>
+<p>The environmental footprint of a computation depends heavily on the electricity that powers it. The carbon intensity of a grid, measured in grams of carbon dioxide per kilowatt-hour, varies by region and by hour with the mix of coal, natural gas, nuclear, wind, solar and hydropower on the system. Running the same job on a grid dominated by wind produces far fewer emissions than running it on a grid dominated by coal. This is why the location of computing is an environmental decision as well as a technical one, and why renewable-rich regions like the Midwest are attractive for sustainable cloud computing.</p>
+<h3>Renewable energy certificates and honest claims</h3>
+<p>Many technology companies describe their operations as powered by renewable energy by purchasing renewable energy certificates (RECs) or power purchase agreements that match their annual consumption. These are legitimate tools, and they are not all equal. Annual matching can be satisfied with wind power generated hundreds of miles away at a different time of day. A more demanding standard is sometimes called hourly or 24/7 carbon-free matching, which asks whether clean power was actually available on the same grid at the moment the computing occurred. A third standard, often called additionality, asks whether a buyer's purchase caused new clean generation to exist or simply reassigned credit for generation that would have been built anyway.</p>
+<p>Honest communication about energy sourcing means stating plainly what share of power comes from direct use of on-site or nearby renewable generation, what share comes from the local utility's mix, and what share is matched with certificates. Skiron's stated approach is to use wind power the grid would otherwise turn away, draw on the local utility the rest of the time, and aim to buy renewable wind certificates for as much of that utility power as possible, working toward fully renewable power as a target rather than claiming it before it is true.</p>
+<h3>Hardware life cycle and the circular economy</h3>
+<p>The environmental cost of a computer is not only the electricity it uses. Manufacturing a GPU server requires mining, chip fabrication, assembly and shipping, which together account for a significant share of its lifetime emissions. Extending the useful life of hardware spreads that embodied carbon over more years of productive work. Using previously deployed enterprise GPU servers is a form of circular economy thinking: a machine that is no longer needed at the very top of the market can continue to do valuable fine-tuning, inference and research work for years. Responsible operators also plan for end of life, with certified recycling and secure data wiping, so that retired equipment does not become electronic waste.</p>
+<h3>Efficient software is green software</h3>
+<p>Hardware and energy sourcing are only part of the picture. Software choices change how much electricity a task uses. Quantization, which stores model weights in fewer bits, can reduce memory and energy use with little loss in quality. Parameter-efficient fine-tuning methods adapt large models by training only a small number of added parameters. Caching, batching and right-sized models avoid the waste of using a very large model for a simple job. Teams that treat energy as a first-class engineering metric, alongside latency and cost, often find that the greenest option is also the cheapest.</p>
+<h3>What to ask any green cloud provider</h3>
+<ul>
+<li>What share of the electricity powering my workload comes from on-site or nearby renewable generation, and how is that measured?</li>
+<li>Do you buy renewable energy certificates or sign power purchase agreements, and are they matched annually or hourly?</li>
+<li>What is the facility's PUE, and how is it measured?</li>
+<li>How is the site cooled, and how much water does it use?</li>
+<li>Is the hardware new or previously deployed, and what is the plan for end of life?</li>
+<li>Where is the facility located, and what data residency and compliance commitments apply?</li>
+</ul>
+</section>
+
+<section id="data-center-ethics" aria-labelledby="data-center-ethics-h">
+<h2 id="data-center-ethics-h">Data center ethics: building technology that deserves a place in the community</h2>
+<p>Data center ethics is the practice of asking who benefits from a facility, who bears its costs, and whether the people affected had a real say. It is increasingly important in the Midwest, where many rural communities have seen proposals for very large data centers arrive with little warning, and where residents have raised fair questions about land, noise, water and electric rates. Responsible AI infrastructure begins with taking those questions seriously.</p>
+<h3>Principle one: transparency</h3>
+<p>Communities cannot evaluate a project they cannot see. Ethical developers disclose who the end users are where possible, how much power and water the facility will use, how it will be cooled, what noise levels to expect and what the construction timeline looks like. Non-disclosure agreements that prevent local officials from discussing basic project facts with their own constituents erode trust. Good practice is to publish a plain-language summary early, hold open meetings, and keep a named contact who responds to neighbors.</p>
+<h3>Principle two: right-sizing</h3>
+<p>A facility should be sized to the energy, land and infrastructure that already exist, rather than asking a community to rebuild its grid. Smaller sites that fit within existing electrical capacity reduce the need for new transmission, new substations and new generation. They also reduce the visual and acoustic footprint. A building that looks like a farm outbuilding and sounds like a normal piece of agricultural equipment is more welcome than a windowless warehouse the size of an airport terminal.</p>
+<h3>Principle three: water stewardship</h3>
+<p>Water is the resource rural communities worry about most when they hear the words data center. Evaporative cooling can consume millions of gallons a year. Ethical siting means choosing air-cooled or closed-loop designs wherever possible, reporting water use honestly, avoiding stressed aquifers, and planning for drought. A pledge to use no water for cooling is one of the clearest, easiest-to-verify commitments a developer can make.</p>
+<h3>Principle four: fair treatment on electricity costs</h3>
+<p>Residents often ask whether a large new customer will raise everyone else's bills. The question is legitimate, and the answer depends on how the load is connected, who pays for upgrades and what rates apply. Ethical projects pay their own way for any infrastructure they require, avoid shifting costs to other ratepayers, and where possible add clean generation or use power that would otherwise go to waste. Using wind energy that would have been curtailed is a particularly good fit with this principle, because it puts surplus to work without adding demand at the grid's tightest moments.</p>
+<h3>Principle five: noise, light and neighborliness</h3>
+<p>Cooling fans and generators can be loud, and a poorly designed site can disturb neighbors day and night. Good design places equipment away from property lines, uses sound-attenuating enclosures, follows local noise ordinances with room to spare, limits exterior lighting, and plants screening vegetation. These are inexpensive measures compared with the goodwill they preserve.</p>
+<h3>Principle six: honest claims about jobs and economic benefits</h3>
+<p>Data centers are capital-intensive and employ relatively few people once built. Ethical developers say so plainly, rather than overpromising jobs, and then identify the real local benefits: construction work, ongoing maintenance and electrical contracting, property tax contributions, lease payments to landowners and wind farm operators, and opportunities for local colleges and training programs. Honest numbers build the long-term relationships that make projects durable.</p>
+<h3>Principle seven: accountability, reachability and local control</h3>
+<p>A good operator is a reachable neighbor. That means a published way to contact the company, prompt responses to concerns, and clear processes for complaints. It also means respecting local zoning, permitting and public review rather than trying to work around them. Community benefit agreements, where the company and the community agree in writing on commitments such as noise limits, water use, road repair and decommissioning, are a useful tool.</p>
+<h3>Principle eight: responsible use of the computing itself</h3>
+<p>Ethics does not stop at the fence line. The purposes the computing serves matter, too. Responsible operators set acceptable-use policies, decline workloads that are clearly harmful or unlawful, protect customer data, and engage thoughtfully with the broader debates about AI safety, fairness and transparency. A data center is a piece of infrastructure, and infrastructure carries responsibility for how it is used.</p>
+<h3>Principle nine: life-cycle responsibility</h3>
+<p>A facility has a beginning and an end. Ethical planning includes decommissioning: how equipment will be removed, how the site will be restored, and how electronic components will be recycled. Choosing equipment with long useful lives, and giving good hardware a second life where appropriate, keeps waste down. Commitments to remove a building and restore the land, made at the beginning, give a county board real assurance.</p>
+<h3>A short checklist for county boards and neighbors</h3>
+<ul>
+<li>How much electricity, in kilowatts or megawatts, will the site draw at peak, and where does it connect to the grid?</li>
+<li>Will anything new need to be built on public land or at public expense?</li>
+<li>How is the site cooled, and how much water will it use per year?</li>
+<li>What are the expected noise levels at the property line, and how will they be measured?</li>
+<li>How many people will work on site, and what local purchasing is planned?</li>
+<li>What happens at the end of the project's life?</li>
+<li>Who is the named contact for neighbors, and how quickly will they respond?</li>
+</ul>
+<h3>A short checklist for customers choosing a provider</h3>
+<ul>
+<li>Does the provider publish its energy sources, cooling method and water use?</li>
+<li>Does the provider explain how it treats the communities that host it?</li>
+<li>Are data protection, compliance and acceptable-use commitments written down?</li>
+<li>Is the hardware life cycle, including reuse and recycling, addressed?</li>
+</ul>
+<p>Skiron's design goal is to meet these standards in the way the sites are built: one farm-style building next to a wind farm that is already operating, a pilot draw of about 51 kilowatts, no water used for cooling, and a site that a county board is comfortable approving and a neighbor barely notices.</p>
+</section>
+<section id="midwest-innovation" aria-labelledby="midwest-innovation-h">
+<h2 id="midwest-innovation-h">Midwestern innovation: from the first electronic computers to the heartland AI economy</h2>
+<p>The Midwest has a long and underappreciated record in computing and energy. Understanding that record helps explain why the region is well placed for the next chapter, and it is also a reminder that innovation here has always been practical, collaborative and rooted in real problems.</p>
+<h3>Early computing in the heartland</h3>
+<p>Between 1939 and 1942, physics professor John Vincent Atanasoff and graduate student Clifford Berry built the Atanasoff-Berry Computer at Iowa State College in Ames. It used binary digits and performed its calculations electronically rather than mechanically, and it is widely cited as one of the earliest electronic digital computing devices, although historians continue to debate questions of priority because the machine was designed for a single purpose and was not programmable. Iowa State later built a working replica to show how it operated.<sup class="fn"><a href="#ref-19" aria-label="Source 19">19</a></sup></p>
+<p>In the decades that followed, the region produced a remarkable list of computing institutions. Control Data Corporation, founded in the Minneapolis area, helped define the supercomputer industry. Wisconsin's Chippewa Falls became synonymous with high-performance computing through the work of Seymour Cray. Cedar Rapids, Iowa, built a reputation in communications and avionics electronics. The University of Illinois at Urbana-Champaign developed a series of pioneering ILLIAC machines and later became home to the National Center for Supercomputing Applications, where the team that built the Mosaic web browser in 1993 helped bring the graphical web to a mass audience.<sup class="fn"><a href="#ref-20" aria-label="Source 20">20</a></sup></p>
+<h3>Silicon Prairie</h3>
+<p>The nickname Silicon Prairie has been applied to technology clusters across the central United States, from Chicago and Minneapolis to Des Moines, Omaha, Kansas City, Madison, Ann Arbor and Columbus. It reflects an entrepreneurial culture that builds software, hardware and services for practical customers, often in sectors such as insurance, agriculture, health care, logistics and manufacturing. Midwestern startups tend to be capital-efficient and focused on real customers, which is a good fit for infrastructure businesses that need to be dependable.</p>
+<h3>Wind energy leadership</h3>
+<p>The Midwest is equally a pioneer in clean energy policy and deployment. Iowa enacted its Alternative Energy Production law in 1983, widely described as the first state renewable portfolio standard in the United States.<sup class="fn"><a href="#ref-9" aria-label="Source 9">9</a></sup> For years its targets were modest, but over time Iowa's utilities, landowners and manufacturers built a wind industry that now generates a majority of the state's electricity. Wind turbines produced about 63 percent of Iowa's power in 2024.<sup class="fn"><a href="#ref-5" aria-label="Source 5">5</a></sup> Farmers lease small parts of their fields to turbine owners and keep farming around them, wind farm lease payments support rural budgets, and manufacturing plants in the region make blades, towers and components. The state's 124 operating utility-scale wind farms are a visible, working example of a clean energy economy.<sup class="fn"><a href="#ref-4" aria-label="Source 4">4</a></sup></p>
+<h3>Land-grant universities and research computing</h3>
+<p>The land-grant university system was built on a simple promise: use research to help ordinary people and local industries. That tradition shows up today in the research computing centers at Midwestern campuses, which provide shared GPU and CPU clusters, training and consulting to faculty and students, and which participate in national programs. Later in this guide you will find a directory of these resources.</p>
+<h3>The next chapter: infrastructure innovation</h3>
+<p>The next wave of Midwestern innovation is likely to combine energy and computing. As AI demand grows, the region can contribute new ways to site, power and operate computing so that it works with the grid and with communities instead of straining them. Wind-powered GPU data centers, community-scale facilities with transparent energy sourcing, partnerships between wind farm operators and compute providers, and regional clouds that serve local universities and businesses are all examples of this infrastructure innovation. The goal is straightforward: put clean power to work where it is produced and keep the benefits local.</p>
+</section>
+
+<section id="midwest-ai-cloud-resources" aria-labelledby="midwest-ai-cloud-resources-h">
+<h2 id="midwest-ai-cloud-resources-h">Midwestern AI and cloud resources: a practical directory</h2>
+<p>This is the most practical part of the guide. It lists categories of computing available to people in the Midwest, explains who each is for, and offers checklists for choosing among them. Programs, hardware and eligibility change, so treat every entry here as a starting point and confirm current details on the provider's own pages, which are linked in the sources at the end. Skiron is not affiliated with, sponsored by or endorsed by any organization named in this section.</p>
+<h3>Start here: matching your need to a resource</h3>
+<div class="table-wrap" role="region" aria-label="Which kind of computing fits which kind of project (scrollable table)" tabindex="0">
+<table>
+<caption>Which kind of computing fits which kind of project</caption>
+<thead><tr><th scope="col">If you are...</th><th scope="col">Start with</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><th scope="row">A student or faculty member at a Midwestern university</th><td>Your campus research computing center</td><td>Accounts are often free to your own campus community, and staff can help you get started.</td></tr>
+<tr><th scope="row">A researcher who needs more GPUs than your campus has</th><td>National programs such as NSF ACCESS and the NAIRR</td><td>Time-limited allocations on large GPU systems, including systems in Illinois and Indiana.</td></tr>
+<tr><th scope="row">A researcher with thousands of small, independent tasks</th><td>The Open Science Pool</td><td>Free high-throughput computing for U.S. academic, government and non-profit work.</td></tr>
+<tr><th scope="row">A startup fine-tuning or serving open models</th><td>Hourly GPU rental from a specialist or regional provider</td><td>Pay for what you use, no long contract, quick start.</td></tr>
+<tr><th scope="row">A business with steady, predictable AI workloads</th><td>Reserved capacity from a cloud provider with a Midwestern region</td><td>Lower latency, predictable pricing and data residency in your region.</td></tr>
+<tr><th scope="row">A university, hospital or manufacturer with long-term needs</th><td>A direct, multi-year agreement with a regional provider</td><td>Custom terms, compliance documentation and a named contact.</td></tr>
+<tr><th scope="row">A county official or landowner evaluating a proposal</th><td>The data center ethics checklists earlier in this guide</td><td>Ask about power, water, noise, jobs and decommissioning.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>University research computing in the Midwest</h3>
+<p>Nearly every major Midwestern research university runs a shared computing cluster. Most use the Slurm batch system, so jobs written for one campus move to another with few changes. Many offer free accounts to their own faculty, staff and students, paid dedicated nodes for groups with larger needs, and training workshops. The examples below illustrate the range; many other campuses offer similar services.</p>
+<ul>
+<li><strong>University of Iowa (Iowa City, Iowa).</strong> The Argon cluster is the campus shared high-performance computing system, run by ITS Research Services. It combines thousands of CPU cores with GPU accelerators of several generations. Accounts are available at no cost to University of Iowa faculty, staff and students who conduct research, and research groups can also buy or rent dedicated nodes.<sup class="fn"><a href="#ref-14" aria-label="Source 14">14</a></sup></li>
+<li><strong>Iowa State University (Ames, Iowa).</strong> The Nova cluster is Iowa State's main research computing system, with CPU nodes and a substantial number of NVIDIA GPU cards, funded in part through National Science Foundation equipment grants. Iowa State uses a condo model, in which faculty can purchase nodes that their research group then shares through the cluster.<sup class="fn"><a href="#ref-15" aria-label="Source 15">15</a></sup></li>
+<li><strong>University of Minnesota (Minneapolis and Saint Paul).</strong> The Minnesota Supercomputing Institute provides computing, software and expert support to faculty and researchers at the university and at other Minnesota institutions of higher education, with large annual allocations of free computing for University of Minnesota faculty and collaborators.<sup class="fn"><a href="#ref-16" aria-label="Source 16">16</a></sup></li>
+<li><strong>University of Michigan (Ann Arbor, Michigan).</strong> The Great Lakes cluster is a campus-wide system for simulation, modeling, machine learning, data science, genomics and other work, available to researchers across the university's campuses through the Advanced Research Computing program.<sup class="fn"><a href="#ref-17" aria-label="Source 17">17</a></sup></li>
+<li><strong>University of Wisconsin-Madison (Madison, Wisconsin).</strong> The Center for High Throughput Computing builds and operates high-throughput computing services for campus researchers, and is a long-standing contributor to the national Open Science Grid.<sup class="fn"><a href="#ref-21" aria-label="Source 21">21</a></sup></li>
+<li><strong>University of Illinois Urbana-Champaign (Urbana, Illinois).</strong> The National Center for Supercomputing Applications operates the Delta and DeltaAI GPU systems, which are allocated largely through national programs, with a portion reserved for Illinois researchers.<sup class="fn"><a href="#ref-11" aria-label="Source 11">11</a></sup></li>
+<li><strong>Purdue University (West Lafayette, Indiana) and Indiana University (Bloomington, Indiana).</strong> Purdue operates the Anvil system and an Anvil AI add-on with H100-class GPUs, and Indiana University operates the Jetstream2 cloud, which offers virtual machines with GPUs for research. Both are available through national allocation programs.<sup class="fn"><a href="#ref-10" aria-label="Source 10">10</a></sup></li>
+<li><strong>Other campuses.</strong> The Ohio State University and the Ohio Supercomputer Center in Columbus, Michigan State University, the University of Nebraska-Lincoln's Holland Computing Center, Kansas State University, the University of Kansas, the University of Missouri, the University of Chicago, Northwestern University, the University of Notre Dame and many regional and liberal arts colleges all provide some level of shared research computing. If your institution is not listed here, ask its IT or research office; there is very likely a team that can help.</li>
+</ul>
+<h3>How to get started on a campus cluster</h3>
+<ol>
+<li>Find your campus research computing or research IT office and read its getting-started page.</li>
+<li>Request an account. Some campuses require a faculty sponsor for students.</li>
+<li>Attend an introductory workshop. Most centers run short sessions on logging in, moving data and submitting your first job.</li>
+<li>Start with a small test run before scaling up, and ask the support staff to review your job scripts. They have seen your problem before.</li>
+<li>If you outgrow your campus allocation, ask about national programs. Campus staff often help with those proposals.</li>
+</ol>
+
+<h3>National programs open to Midwestern researchers</h3>
+<ul>
+<li><strong>NSF ACCESS.</strong> The Advanced Cyberinfrastructure Coordination Ecosystem: Services and Support, known as ACCESS, is the National Science Foundation's program that gives U.S. researchers and educators time on a national collection of computing, storage and cloud resources. It offers a ladder of allocation sizes, beginning with small exploratory awards that can be obtained quickly, and it includes GPU-heavy systems based in the Midwest.<sup class="fn"><a href="#ref-10" aria-label="Source 10">10</a></sup></li>
+<li><strong>NCSA Delta and DeltaAI.</strong> Based at the University of Illinois Urbana-Champaign, Delta is a GPU-focused system with several kinds of GPU accelerators, and DeltaAI is a companion system built on newer Grace Hopper nodes. Most of their capacity is allocated through ACCESS, and a portion has also been offered through the National AI Research Resource pilot.<sup class="fn"><a href="#ref-11" aria-label="Source 11">11</a></sup></li>
+<li><strong>Purdue Anvil and Anvil AI.</strong> Anvil is a general-purpose system with an AI-focused addition that includes H100-class GPUs, allocated through ACCESS and the national AI resource program.<sup class="fn"><a href="#ref-10" aria-label="Source 10">10</a></sup></li>
+<li><strong>Indiana University Jetstream2.</strong> A cloud-style research system that runs virtual machines on demand, including GPU instances, which suits science gateways, teaching and long-running services.<sup class="fn"><a href="#ref-10" aria-label="Source 10">10</a></sup></li>
+<li><strong>National AI Research Resource (NAIRR).</strong> Begun as a National Science Foundation pilot, the NAIRR connects U.S. researchers, educators and students with computing, models, datasets and training. The pilot has been moving toward a permanent program, so check the portal for current calls and deadlines.<sup class="fn"><a href="#ref-12" aria-label="Source 12">12</a></sup></li>
+<li><strong>Argonne Leadership Computing Facility.</strong> The U.S. Department of Energy's Argonne National Laboratory in Lemont, Illinois, operates large leadership-class systems for science, including exascale-class computing, and awards time through competitive programs for projects that need very large resources.<sup class="fn"><a href="#ref-22" aria-label="Source 22">22</a></sup></li>
+<li><strong>Open Science Pool.</strong> The Open Science Grid consortium operates the Open Science Pool, a free, shared high-throughput computing service that pools capacity contributed by campuses and national laboratories. It is open to individuals and projects at U.S. academic, government and non-profit organizations, with no proposal required, and it works best for workloads made of many independent tasks, such as parameter sweeps, image analysis and bioinformatics.<sup class="fn"><a href="#ref-13" aria-label="Source 13">13</a></sup></li>
+<li><strong>Regional research networks.</strong> Research and education networks such as Internet2 and regional members across the Midwest connect campuses with high-capacity fiber, which makes moving large datasets between institutions practical.</li>
+</ul>
+<p>Note that national programs generally require that your work be open or academic in nature and that you submit a short proposal. Commercial startups usually need to look to the commercial options below.</p>
+
+<h3>Commercial cloud regions in and near the Midwest</h3>
+<p>Several of the largest cloud platforms operate regions in the heartland, which is useful if you want low latency to Midwestern customers, regional data residency or a familiar platform with a rich service catalog.</p>
+<ul>
+<li><strong>Google Cloud us-central1 (Council Bluffs, Iowa).</strong> One of the most widely used Google Cloud regions is located at the Council Bluffs campus in western Iowa.</li>
+<li><strong>Microsoft Azure Central US (Iowa).</strong> Azure's Central US region has operated in Iowa since 2014, and Microsoft also operates a North Central US region in Illinois.</li>
+<li><strong>Amazon Web Services US East (Ohio), us-east-2.</strong> Opened in 2016, the Ohio region serves customers across the eastern and central United States.</li>
+<li><strong>Chicago and Columbus.</strong> Chicago is one of the largest data center and network interconnection markets in the country, and Columbus, Ohio, has become an important cloud region location.</li>
+</ul>
+<p>Hyperscale platforms offer breadth, mature tooling and strong compliance documentation. Their drawbacks for AI builders can include scarce or expensive on-demand GPUs, quotas that must be requested in advance, and limited transparency about the electricity mix behind a particular region. Ask each platform for region-level energy and carbon data before you decide. Each provider publishes its current list of regions and services.<sup class="fn"><a href="#ref-18" aria-label="Source 18">18</a></sup></p>
+
+<h3>Hourly GPU rental and compute marketplaces</h3>
+<p>A growing set of specialist providers and marketplaces rent GPU servers by the hour. They are popular with AI startups, independent researchers and developers because there is no long commitment and capacity can often be started within minutes. Single 8-GPU servers are a common unit for fine-tuning and running open models. Some marketplaces connect many small hosts, while others offer capacity from a single operator. When you compare options, look at the following.</p>
+<ul>
+<li><strong>Hardware.</strong> Which GPU model, how much memory per GPU, how are the GPUs connected inside the server, and how fast is the network?</li>
+<li><strong>Reliability.</strong> Is the host a professional data center operator, and what is the uptime commitment?</li>
+<li><strong>Location.</strong> Where are the servers, and how close are they to your users and your data?</li>
+<li><strong>Energy.</strong> Does the provider tell you how the facility is powered?</li>
+<li><strong>Data protection.</strong> How is your data isolated, encrypted and deleted when you finish?</li>
+<li><strong>Support.</strong> Can you reach a human who will answer?</li>
+<li><strong>Terms.</strong> What are the minimum rental periods, billing increments and cancellation rules?</li>
+</ul>
+<p>Skiron plans to rent computing time by the GPU-hour, mostly as single 8-GPU servers for fine-tuning and running AI models, with some capacity sold to cloud providers in longer blocks, and over time to sign direct agreements with universities and businesses in the region for stable long-term cloud computing services.</p>
+
+<h3>Checklists by audience</h3>
+<h4>For AI startups and developers</h4>
+<ul>
+<li>Begin with the smallest instance that proves your idea, then scale.</li>
+<li>Containerize your environment so you can move between providers.</li>
+<li>Track cost and energy per training run or per thousand inferences.</li>
+<li>Use open-weight models and parameter-efficient fine-tuning where they fit.</li>
+<li>Ask each provider for its energy and cooling details.</li>
+</ul>
+<h4>For university researchers and students</h4>
+<ul>
+<li>Use your campus cluster first. It is free or low cost and staffed by people who want to help.</li>
+<li>Apply for an exploratory national allocation if you need larger GPU systems.</li>
+<li>Use the Open Science Pool for very large collections of independent tasks.</li>
+<li>Write reproducible job scripts and share them with your group.</li>
+<li>Cite the computing resources you used. Centers rely on those citations.</li>
+</ul>
+<h4>For manufacturers, farms and agricultural technology firms</h4>
+<ul>
+<li>Identify the one or two decisions where a model could save the most time or material, such as defect detection, yield estimation or equipment maintenance.</li>
+<li>Keep sensitive operational data in a region you control, and confirm where it is stored.</li>
+<li>Consider regional providers for lower latency and a local contact.</li>
+<li>Talk with your state university extension or engineering outreach program about shared projects.</li>
+</ul>
+<h4>For hospitals, schools and local governments</h4>
+<ul>
+<li>Confirm the compliance frameworks you need, such as HIPAA for health data, FERPA for student records or SOC 2 reports for service providers.</li>
+<li>Prefer written commitments on data residency, retention and deletion.</li>
+<li>Choose providers that are open about energy and community practices, since your choices are visible to the public.</li>
+</ul>
+<h4>For wind farm operators and landowners</h4>
+<ul>
+<li>Ask whether your farm experiences curtailment and in which hours.</li>
+<li>Learn how a nearby computing site could use energy you would otherwise lose, and what lease or power arrangement would apply.</li>
+<li>Insist on the transparency, noise, water and decommissioning commitments described earlier.</li>
+<li>Talk with your utility early about how any new load would connect.</li>
+</ul>
+
+<h3>Learning and community</h3>
+<p>The Midwest has a rich set of places to learn about AI and cloud computing. University research computing centers run workshops. Community colleges and technical programs offer training in data center operations, electrical work and networking. The Carpentries and similar volunteer groups teach data and programming skills. The Midwest Big Data Innovation Hub, one of the National Science Foundation's regional big data hubs, convenes researchers and practitioners across twelve states. Meetups and developer groups in Chicago, Minneapolis, Madison, Ann Arbor, Columbus, Indianapolis, Kansas City, Omaha, Des Moines and Iowa City provide places to share what you are building. Regional chambers of commerce and economic development offices can often connect a company with training partners and incentives.</p>
+
+<h3>Planning a first project: a short roadmap</h3>
+<ol>
+<li><strong>Define the question.</strong> Write one sentence describing what you want the model or analysis to do.</li>
+<li><strong>Size the compute.</strong> Estimate GPU memory and hours using published benchmarks or a small pilot run.</li>
+<li><strong>Pick the venue.</strong> Use a campus cluster, a national allocation or a commercial provider based on who you are and the table above.</li>
+<li><strong>Prepare the data.</strong> Clean, document and protect it, and decide where it will live.</li>
+<li><strong>Run a small trial.</strong> Check cost, speed and reliability before committing to a long run.</li>
+<li><strong>Measure energy and cost.</strong> Record both, so you can improve over time.</li>
+<li><strong>Publish or deploy.</strong> Share what you learned, and keep notes for the next project.</li>
+</ol>
+</section>
+<section id="skiron-approach" aria-labelledby="skiron-approach-h">
+<h2 id="skiron-approach-h">How Skiron approaches wind-powered computing</h2>
+<p>Skiron is a Midwestern company building toward a simple idea: put GPU computing beside the wind farms that sometimes produce more power than the grid can carry, and rent that computing time to the people building and running AI and cloud systems. The company is based in Iowa City, IA, and its first site is planned for a central or eastern Iowa wind farm. This section describes the approach in the same terms the company uses on its home page. Everything about the first site is a plan, and the plans may change as the site and power agreement take shape.</p>
+<h3>The idea in three sentences</h3>
+<p>Wind farms in the Midwest regularly give up energy because transmission lines are full. Skiron builds a small, compact data center at the wind farm so that energy goes to work as computing instead of being lost. The rest of the time, the site runs on service from the local utility, and Skiron works toward buying renewable certificates for as much of that utility power as possible.</p>
+<h3>The planned pilot site</h3>
+<div class="table-wrap" role="region" aria-label="Current plans for Skiron's first site (scrollable table)" tabindex="0">
+<table>
+<caption>Current plans for Skiron's first site</caption>
+<tbody>
+<tr><th scope="row">Size</th><td>40 NVIDIA H100 GPUs in five 8-GPU servers</td></tr>
+<tr><th scope="row">Power draw</th><td>About 51 kilowatts</td></tr>
+<tr><th scope="row">Building</th><td>A pole barn on a concrete slab</td></tr>
+<tr><th scope="row">Time to power</th><td>10 to 16 weeks after the site and power agreement are signed</td></tr>
+<tr><th scope="row">Operations</th><td>Remote monitoring, with staff on site within an hour</td></tr>
+<tr><th scope="row">Cooling</th><td>Air-cooled, with no water used for cooling</td></tr>
+<tr><th scope="row">Location</th><td>A wind farm in eastern Iowa within an hour of Iowa City; site selection is underway</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Why small is a strength</h3>
+<p>Skiron's power consumption is measured in kilowatts, while the largest AI campuses measure theirs in megawatts or gigawatts, several orders of magnitude larger. That difference means a Skiron site can fit within the capacity of the grid connection already at a wind farm, so it skips the multi-year wait that large data centers face and can be running within a season.<sup class="fn"><a href="#ref-3" aria-label="Source 3">3</a></sup> A small site is also easier on neighbors: it is one farm-style building next to a wind farm that is already operating.</p>
+<h3>Used hardware, lower cost, lower waste</h3>
+<p>Skiron plans to use previously deployed enterprise GPU servers. Used equipment keeps good machines in productive service, which spreads their manufacturing footprint over more years of useful work, and it helps Skiron offer competitive prices at a small scale. Combined with lower-cost power during curtailment and a small physical footprint, it makes the model practical in places where a very large facility would not be.</p>
+<h3>Who the computing is for</h3>
+<p>Skiron plans to rent computing time by the GPU-hour, mostly as single 8-GPU servers for fine-tuning and running AI models. Some will go to AI startups, researchers and developers through compute marketplaces. Some will be sold in longer blocks to cloud providers that need steady capacity. Over time, Skiron plans to sign direct agreements with universities and businesses in the region for stable long-term cloud computing services. Skiron expects to pursue SOC 2 certification to support those longer relationships.</p>
+<h3>How the company intends to grow</h3>
+<p>The first step is the pilot: one 40-GPU site at an Iowa wind farm, built to show that environmentally conscious computing works in practice. After that, Skiron plans to add more farms across the Midwest and South, with newer and more powerful GPUs, and to build long-term relationships with universities, regional businesses and larger technology buyers.</p>
+<h3>Questions, ideas and conversations</h3>
+<p>Wind farm operators, landowners, researchers, teams that need GPU computing time, county officials and anyone who wants to learn more are welcome to reach out through the contact form on the <a href="index.html#contact">Skiron home page</a>. Skiron will respond to messages sent through the form.</p>
+</section>
+
+<section id="future-optimism" aria-labelledby="future-optimism-h">
+<h2 id="future-optimism-h">The optimistic case: a heartland built for the next century of computing</h2>
+<p>It is easy to read the headlines about AI and electricity and feel pessimistic. The demand is growing quickly, the grid is stressed and communities are anxious. But there is a compelling, realistic and optimistic story available too, and it happens to be rooted in the same region that has long turned practical ideas into working systems.</p>
+<h3>What success could look like</h3>
+<ul>
+<li><strong>Wasted wind becomes useful work.</strong> Energy that wind farms now give up during congested hours gets used as computing, improving the economics of existing wind projects and the carbon profile of new AI.</li>
+<li><strong>Communities lead.</strong> Rural counties set clear standards for transparency, water, noise and decommissioning, and developers meet them. Data centers become the kind of neighbor a town is proud of.</li>
+<li><strong>Regional cloud capacity grows.</strong> Universities, hospitals, manufacturers, farms and startups in the Midwest can run their AI close to home, with a local contact and clear information about how their computing is powered.</li>
+<li><strong>Hardware lives longer.</strong> A thriving market for previously deployed GPU servers keeps valuable equipment in service for many years and reduces electronic waste.</li>
+<li><strong>Skills spread.</strong> Community colleges, technical programs and apprenticeships train electricians, technicians and operators for work in the new energy-and-computing economy, so that opportunity reaches people in small towns.</li>
+<li><strong>Research gets easier.</strong> Students and faculty gain access to more GPU time, through campus clusters, national programs and regional providers, and more of the discoveries they make are built in the heartland.</li>
+<li><strong>Transmission catches up.</strong> New high-voltage lines, storage and local uses for surplus power together reduce curtailment, so that more of the Midwest's wind reaches the customers who value it.</li>
+</ul>
+<h3>Why the optimism is practical</h3>
+<p>None of this requires a miracle technology. Wind farms exist. Fiber exists. Used GPU servers exist. Air cooling works. University research computing centers exist and are staffed by people who enjoy helping newcomers. What the region needs is patient, careful development that respects the communities it serves, and customers who ask good questions and reward good answers. Each well-designed facility, each honest energy report and each helpful campus workshop makes the whole pattern more credible.</p>
+<h3>Responsible AI and the human side</h3>
+<p>An optimistic view of technology is a responsible one. It takes the risks seriously, includes the people affected, and measures success by outcomes in the real world. For AI infrastructure, that means asking not only how fast a model can be trained, but also who benefits, what it costs the environment, and whether the community that hosts the machines is better off. The Midwest has the history, the institutions and the temperament to answer those questions well.</p>
+<h3>How you can help</h3>
+<ul>
+<li>If you are a builder, choose providers that are open about their energy and cooling, and ask for numbers.</li>
+<li>If you are a researcher, use and cite shared resources, and mentor the next student.</li>
+<li>If you are a county official or neighbor, ask the checklist questions early and ask them often.</li>
+<li>If you operate or own a wind farm, find out how much energy is curtailed and whether a local use is possible.</li>
+<li>If you are a teacher or employer, support training in the skills that energy and computing infrastructure need.</li>
+</ul>
+<p>The wind will keep blowing across the plains. With thoughtful design and good neighbors, the Midwest can turn that steady resource into some of the cleanest, fairest and most useful computing in the country.</p>
+</section>
+<section id="topics" aria-labelledby="topics-h">
+<h2 id="topics-h">Topics at a glance</h2>
+<p>For readers and research tools that want the main themes of this guide in one place, here is a short summary of each, with pointers to the sections that cover them in depth.</p>
+<h3>Computing and AI infrastructure</h3>
+<p>Modern AI infrastructure rests on GPU servers, fast networking, reliable power and careful cooling. Regional GPU cloud capacity supports fine-tuning of open-weight models, inference for local businesses, scientific simulation and classroom use. Small, efficient, scalable facilities complement the hyperscale cloud by putting next-generation computing closer to the customers and communities that use it. See <a href="#green-computing">green AI and sustainable computing</a> and <a href="#midwest-ai-cloud-resources">Midwestern AI and cloud resources</a>.</p>
+<h3>Renewable power and green energy</h3>
+<p>Wind energy is the Midwest's signature clean power source. Curtailment, congestion and slow transmission buildout leave real quantities of renewable electricity unused, which is a missed opportunity for both clean energy and the economics of wind farms. Putting that surplus to work as computing is a practical path toward renewable-powered cloud services and cleaner AI. See <a href="#wind-curtailment-grid">wind power, curtailment and the grid</a>.</p>
+<h3>Midwestern innovation</h3>
+<p>From the first electronic digital computing experiments in Iowa to the supercomputing centers of Illinois, Minnesota and Wisconsin, and from the nation's first state renewable portfolio standard to its highest wind share, the heartland has a track record of practical innovation. Its research universities, manufacturers, farms and startups form a regional innovation ecosystem well suited to energy and computing infrastructure. See <a href="#midwest-innovation">Midwestern innovation</a>.</p>
+<h3>Data center ethics and community-first design</h3>
+<p>Responsible data center development is transparent, right-sized, water-wise, fair on electricity costs, quiet, accountable and planned for its whole life. Community benefit agreements, honest claims about jobs, air cooling and respect for local control are the hallmarks of a data center that deserves to be welcomed. See <a href="#data-center-ethics">data center ethics</a>.</p>
+<h3>Future optimism</h3>
+<p>The path to sustainable AI does not depend on a miracle. Existing wind farms, fiber networks, reused enterprise hardware, university research computing and thoughtful local planning can combine into a clean energy computing economy that shares its benefits with the people who host it. See <a href="#future-optimism">the optimistic case</a>.</p>
+<h3>Regional AI and cloud resources</h3>
+<p>Midwestern students, researchers, startups, manufacturers, hospitals and local governments can draw on campus clusters, national programs such as NSF ACCESS and the NAIRR, the Open Science Pool, commercial cloud regions in Iowa, Illinois and Ohio, and hourly GPU rental. Matching the resource to the project saves time, money and energy. See the <a href="#midwest-ai-cloud-resources">directory and checklists</a>.</p>
+</section>
+<section id="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Frequently asked questions</h2>
+<p>These short answers cover the questions people ask most often about wind-powered computing, Midwestern AI and cloud resources, and data center ethics.</p>
+
+<h3>What is wind-powered computing?</h3>
+<p>Wind-powered computing means running servers, such as GPU machines for AI, on electricity generated by wind turbines. The strongest version places the servers next to a wind farm so that they can use energy that the grid would otherwise turn away. It cuts the carbon intensity of the computing and puts surplus clean energy to productive use.</p>
+
+<h3>What is curtailment and why does it happen?</h3>
+<p>Curtailment is a reduction in a power plant's output below what it could produce. It happens when the transmission lines near a wind farm are full or when the grid cannot use all the available power at that moment. In MISO, the grid operator for much of the Midwest, wind curtailment averaged 726 megawatts every hour in 2022 and reached 5.9 gigawatts in some hours.<sup class="fn"><a href="#ref-1" aria-label="Source 1">1</a></sup></p>
+
+<h3>Why build a data center at a wind farm?</h3>
+<p>Electricity is costly to move over long distances when lines are congested, but data travels easily over fiber. A data center at the wind farm can use power on the spot and send results anywhere. The wind farm earns money from electricity it would have lost, and the computing customer benefits from lower-cost, lower-carbon power.</p>
+
+<h3>How much power does a small GPU data center use?</h3>
+<p>A single 8-GPU server can draw on the order of ten kilowatts under heavy load. Skiron's planned pilot site, with five such servers holding 40 GPUs, is expected to draw about 51 kilowatts. For comparison, the largest AI campuses plan for hundreds of megawatts or more.</p>
+
+<h3>Does a data center beside a wind farm run on 100 percent wind?</h3>
+<p>Not necessarily, and an honest provider will say so. The wind does not blow every hour. Skiron's plan is to use wind power the grid would otherwise turn away, draw on the local utility the rest of the time, and aim to buy renewable wind certificates for as much of that power as possible, with fully renewable power as the target.</p>
+
+<h3>Is air cooling really water-free?</h3>
+<p>Air-cooled systems reject heat into the outside air with fans and heat exchangers, so they do not evaporate water to cool the equipment. They may use somewhat more electricity on very hot days. Skiron's planned pilot site is air-cooled and uses no water for cooling.</p>
+
+<h3>What is a GPU-hour?</h3>
+<p>A GPU-hour is one graphics processing unit used for one hour. It is the standard way to measure and rent AI computing. Eight GPUs running for three hours is twenty-four GPU-hours. Providers often rent GPUs by the hour, frequently as an entire 8-GPU server at a time.</p>
+
+<h3>What can I run on a single 8-GPU server?</h3>
+<p>A single 8-GPU server can fine-tune many open-weight language models, run inference for a regional business, train computer vision models, process scientific datasets, and support classroom or research projects. Very large training runs that span thousands of GPUs need much bigger clusters, but a great deal of valuable AI work fits on one server.</p>
+
+<h3>How can Midwestern university researchers get GPU time?</h3>
+<p>Start with your campus research computing center, which often provides free accounts to faculty, staff and students. If you need more, apply for an allocation through national programs such as NSF ACCESS and the National AI Research Resource, which include GPU systems in Illinois and Indiana. For workloads made of many independent tasks, the Open Science Pool is free to U.S. academic, government and non-profit users.<sup class="fn"><a href="#ref-10" aria-label="Source 10">10</a></sup><sup class="fn"><a href="#ref-13" aria-label="Source 13">13</a></sup></p>
+
+<h3>Are there free GPU resources for Midwestern students?</h3>
+<p>Many campus clusters offer free accounts to enrolled students, often through a faculty sponsor. National programs also support educational use. Ask your institution's research computing or IT office what is available and whether a workshop is scheduled.</p>
+
+<h3>Which cloud regions are in the Midwest?</h3>
+<p>Google Cloud's us-central1 region is in Council Bluffs, Iowa. Microsoft Azure's Central US region is in Iowa, and Azure also has a North Central US region in Illinois. Amazon Web Services operates its US East (Ohio) region, us-east-2. Chicago and Columbus are major data center and network hubs. Check each provider's current region list for details.<sup class="fn"><a href="#ref-18" aria-label="Source 18">18</a></sup></p>
+
+<h3>Why does location matter for the carbon footprint of AI?</h3>
+<p>The same computation produces very different emissions depending on the electricity mix of the grid that powers it. A job running mostly on wind power generates far less carbon dioxide than the same job running mostly on coal. Siting computing where clean power is abundant, and being transparent about the mix, is one of the most effective ways to make AI greener.</p>
+
+<h3>What is PUE and what is a good value?</h3>
+<p>Power usage effectiveness (PUE) is the total energy a facility uses divided by the energy used by its computing equipment. Lower is better, and 1.0 is the theoretical minimum. An industry survey reported an average of about 1.56 in 2024, while well-designed modern facilities, particularly in cool climates, can achieve noticeably lower numbers.<sup class="fn"><a href="#ref-8" aria-label="Source 8">8</a></sup></p>
+
+<h3>How do data centers affect local electric bills?</h3>
+<p>It depends on the project. The key questions are who pays for the grid upgrades a new load requires, what rate the facility pays, and whether new clean generation is added or surplus power is used. A small facility that fits within existing capacity and uses energy that would otherwise be curtailed is less likely to require costly new infrastructure. Residents are right to ask for these details in writing.</p>
+
+<h3>How many jobs does a data center create?</h3>
+<p>Data centers are capital-intensive and typically employ relatively few people once they are built. The local benefits usually come from construction, ongoing maintenance and electrical work, lease payments to landowners, local purchasing, property taxes, and training opportunities. Honest developers describe those benefits plainly rather than promising large numbers of permanent jobs.</p>
+
+<h3>What should a county board ask a data center developer?</h3>
+<p>Ask how much power the site will draw, how it connects to the grid, how it is cooled, how much water it will use, what noise levels to expect at the property line, how many people will work there, what local contracts are planned, what happens at the end of the project, and who neighbors can contact. The checklist in the data center ethics section above covers these points.</p>
+
+<h3>What is data residency and why does it matter?</h3>
+<p>Data residency is the requirement or preference that data be stored and processed in a specific country, state or region. It matters for legal compliance, customer trust and latency. Regional cloud providers and regions located in the Midwest make it easier to keep data close to the organizations that own it.</p>
+
+<h3>What is the difference between training, fine-tuning and inference?</h3>
+<p>Training builds a model from scratch on a very large dataset and needs the most computing. Fine-tuning adapts an existing model to a specific task using far less computing. Inference is using a trained model to produce answers or predictions. Fine-tuning and inference make up a large share of everyday AI work and fit well on small, regionally located GPU servers.</p>
+
+<h3>What are renewable energy certificates and are they enough?</h3>
+<p>Renewable energy certificates (RECs) represent the environmental attributes of one megawatt-hour of renewable electricity. Buying them is a recognized way to support renewable generation and to match consumption on paper. They are most meaningful when paired with clear reporting on how closely the renewable generation matches the time and place of the computing, and with efforts to use clean power directly.</p>
+
+<h3>Why use previously deployed GPU servers?</h3>
+<p>Using servers that have already been manufactured spreads their embodied carbon across more years of useful work, reduces electronic waste, and lowers the cost of capacity. Enterprise GPU servers are built to run for years, and many can continue to do valuable fine-tuning, inference and research work long after they leave the very top of the market.</p>
+
+<h3>How long does it take to build a small data center?</h3>
+<p>It varies with the site, the permits and the equipment. Skiron's current plan for its pilot site is 10 to 16 weeks after the site and power agreement are signed. Very large data centers can wait years for a grid connection, which is one reason small sites that fit within existing electrical capacity are attractive.<sup class="fn"><a href="#ref-3" aria-label="Source 3">3</a></sup></p>
+
+<h3>What does the Midwest offer AI companies that other regions do not?</h3>
+<p>The Midwest combines abundant wind energy, available land, lower costs, a strong base of universities and research computing centers, a skilled and practical workforce, and communities that expect responsible development. That combination supports sustainable, community-first AI infrastructure and regional cloud capacity close to customers.</p>
+
+<h3>Where is Skiron based and how can I reach the company?</h3>
+<p>Skiron Technology is based in Iowa City, IA. The company is planning its first site at a central or eastern Iowa wind farm. You can reach Skiron through the contact form on the <a href="index.html#contact">home page</a>, and Skiron will respond.</p>
+
+<h3>Is Skiron affiliated with the organizations named in this guide?</h3>
+<p>No. Skiron is not affiliated with, sponsored by or endorsed by any university, laboratory, government program, cloud provider, hardware maker or other organization named in this guide. They are mentioned only as publicly available resources, and their programs and eligibility rules are set by them.</p>
+</section>
+
+<section id="glossary" aria-labelledby="glossary-h">
+<h2 id="glossary-h">Glossary of wind, computing and data center terms</h2>
+<dl>
+<dt>24/7 carbon-free energy</dt><dd>A standard that seeks to match a facility's electricity use with carbon-free generation in every hour, rather than averaging over a year.</dd>
+<dt>Additionality</dt><dd>The idea that a clean energy purchase should lead to new clean generation that would not have been built otherwise.</dd>
+<dt>Air cooling</dt><dd>Removing heat from servers by moving outside air or by using fans and heat exchangers, without evaporating water.</dd>
+<dt>Batch system</dt><dd>Software on a research cluster that queues users' jobs and runs them when resources are free. Slurm is a widely used example.</dd>
+<dt>Behind-the-meter</dt><dd>Generation or equipment located on the customer's side of a utility meter, so that power is used on site instead of being sent onto the wider grid.</dd>
+<dt>Capacity factor</dt><dd>The share of a power plant's maximum possible output that it actually produces over a period, usually a year.</dd>
+<dt>Carbon intensity</dt><dd>The amount of carbon dioxide emitted per unit of electricity, typically grams per kilowatt-hour. It varies by grid and by hour.</dd>
+<dt>Circular economy</dt><dd>An approach that keeps products and materials in use as long as possible through reuse, repair and recycling.</dd>
+<dt>Cloud region</dt><dd>A geographic area where a cloud provider operates one or more data centers, offered to customers as a named location.</dd>
+<dt>Colocation</dt><dd>Renting space, power and cooling in a data center to house your own servers.</dd>
+<dt>Community benefit agreement</dt><dd>A written agreement between a developer and a community setting out commitments such as noise limits, water use, road repair and decommissioning.</dd>
+<dt>Compute marketplace</dt><dd>An online platform where providers list GPU or CPU capacity and customers rent it, usually by the hour.</dd>
+<dt>Congestion</dt><dd>A transmission constraint that prevents lower-cost power from reaching every place that wants it.</dd>
+<dt>Container</dt><dd>A packaged software environment that runs the same way on different machines, which makes it easier to move work between providers.</dd>
+<dt>Curtailment</dt><dd>A reduction in a power plant's output below what it could produce, often because of congestion or oversupply.</dd>
+<dt>Data center</dt><dd>A facility that houses computing, storage and networking equipment together with the power and cooling systems that support it.</dd>
+<dt>Data residency</dt><dd>The requirement or preference that data be stored and processed in a particular country, state or region.</dd>
+<dt>Embodied carbon</dt><dd>The emissions created by manufacturing, shipping and installing equipment, before it ever uses electricity.</dd>
+<dt>Exascale</dt><dd>Computing at or above one quintillion calculations per second.</dd>
+<dt>Fine-tuning</dt><dd>Adapting a pretrained AI model to a specific task or dataset using a relatively small amount of additional training.</dd>
+<dt>GPU</dt><dd>Graphics processing unit, a processor that performs many calculations in parallel and is the workhorse of modern AI.</dd>
+<dt>GPU-hour</dt><dd>One GPU used for one hour, the common unit for measuring and renting AI computing.</dd>
+<dt>Gigawatt (GW)</dt><dd>One thousand megawatts, or one billion watts.</dd>
+<dt>High-performance computing (HPC)</dt><dd>The use of powerful clusters and supercomputers to solve large scientific and engineering problems.</dd>
+<dt>High-throughput computing</dt><dd>Running very large numbers of independent tasks over time, often across many machines.</dd>
+<dt>Hyperscale</dt><dd>Very large cloud facilities and platforms operated by the biggest technology companies.</dd>
+<dt>Inference</dt><dd>Using a trained AI model to produce outputs such as text, classifications or predictions.</dd>
+<dt>Interconnection queue</dt><dd>The waiting line of generation and load projects that need studies and approval before connecting to the grid.</dd>
+<dt>Kilowatt (kW)</dt><dd>One thousand watts, a measure of power.</dd>
+<dt>Kilowatt-hour (kWh)</dt><dd>The energy used by drawing one kilowatt for one hour.</dd>
+<dt>Land-grant university</dt><dd>A public university established under federal law with a mission of practical education, research and outreach.</dd>
+<dt>Latency</dt><dd>The delay between sending a request and receiving a response over a network.</dd>
+<dt>Megawatt (MW)</dt><dd>One thousand kilowatts, or one million watts.</dd>
+<dt>MISO</dt><dd>The Midcontinent Independent System Operator, the grid operator for all or part of fifteen states, including Iowa, Minnesota, Illinois and others.</dd>
+<dt>Nameplate capacity</dt><dd>The maximum rated output of a generator.</dd>
+<dt>Negative pricing</dt><dd>A situation in which the wholesale price of electricity at a location falls below zero because supply exceeds demand.</dd>
+<dt>Open-weight model</dt><dd>An AI model whose trained parameters are published so that others can run and adapt it.</dd>
+<dt>Parameter-efficient fine-tuning</dt><dd>Methods that adapt a large model by training only a small number of added or selected parameters, which saves computing and energy.</dd>
+<dt>Power purchase agreement (PPA)</dt><dd>A long-term contract to buy electricity from a specific generator.</dd>
+<dt>PUE</dt><dd>Power usage effectiveness, the ratio of total facility energy to the energy used by computing equipment. Lower is better.</dd>
+<dt>Quantization</dt><dd>Storing a model's numbers with fewer bits to reduce memory and energy use.</dd>
+<dt>Renewable energy certificate (REC)</dt><dd>A tradable record of the environmental attributes of one megawatt-hour of renewable electricity.</dd>
+<dt>Renewable portfolio standard</dt><dd>A state policy requiring utilities to obtain a specified amount of electricity from renewable sources.</dd>
+<dt>SOC 2</dt><dd>A widely used compliance report in which an independent auditor assesses a service provider's controls for data protection and reliability.</dd>
+<dt>SPP</dt><dd>The Southwest Power Pool, a grid operator covering parts of the central United States, including Kansas, Nebraska and neighboring states.</dd>
+<dt>Substation</dt><dd>A facility that changes voltage and connects power lines, where a large customer typically connects to the grid.</dd>
+<dt>Terawatt-hour (TWh)</dt><dd>One billion kilowatt-hours, used for national and global electricity totals.</dd>
+<dt>Time to power</dt><dd>The time between deciding to build a facility and having electricity available to run it.</dd>
+<dt>Training</dt><dd>Building an AI model by adjusting its parameters on a large dataset.</dd>
+<dt>Transmission</dt><dd>The high-voltage network that carries bulk power over long distances.</dd>
+<dt>Water usage effectiveness (WUE)</dt><dd>Liters of water used per kilowatt-hour of computing energy.</dd>
+<dt>Wind power curve</dt><dd>The relationship between wind speed and a turbine's electrical output.</dd>
+</dl>
+</section>
+
+<section id="sources" aria-labelledby="sources-h">
+<h2 id="sources-h">Sources and further reading</h2>
+<p>Links were checked when this guide was written in October 2026. Programs, systems and statistics change, so confirm current details with each organization.</p>
+<ol class="refs">
+<li id="ref-1">U.S. Energy Information Administration, "Why are Midwest grid operators turning away wind power?" <a href="https://www.eia.gov/todayinenergy/detail.php?id=62406" rel="noopener">https://www.eia.gov/todayinenergy/detail.php?id=62406</a></li>
+<li id="ref-2">S&amp;P Global Market Intelligence, "US grid congestion intensifies as data centers compound transmission constraints," September 2026. <a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/09/us-grid-congestion-intensifies-as-data-centers-compound-transmission-constraints" rel="noopener">https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/09/us-grid-congestion-intensifies-as-data-centers-compound-transmission-constraints</a></li>
+<li id="ref-3">Enverus, "Time to power: how data center developers can fast-track energization in a constrained grid." <a href="https://www.enverus.com/blog/time-to-power-how-data-center-developers-can-fast-track-energization-in-a-constrained-grid/" rel="noopener">https://www.enverus.com/blog/time-to-power-how-data-center-developers-can-fast-track-energization-in-a-constrained-grid/</a></li>
+<li id="ref-4">Cleanview, "Wind farms in Iowa" (project tracker, updated October 2026). <a href="https://www.cleanview.co/power-projects/operating/wind-farms/iowa" rel="noopener">https://www.cleanview.co/power-projects/operating/wind-farms/iowa</a></li>
+<li id="ref-5">U.S. Energy Information Administration, Iowa state profile and quick facts. <a href="https://www.eia.gov/states/IA/overview" rel="noopener">https://www.eia.gov/states/IA/overview</a></li>
+<li id="ref-6">Lawrence Berkeley National Laboratory, "2024 United States Data Center Energy Usage Report." <a href="https://eta-publications.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report" rel="noopener">https://eta-publications.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report</a></li>
+<li id="ref-7">International Energy Agency, "Energy and AI." <a href="https://www.iea.org/reports/energy-and-ai" rel="noopener">https://www.iea.org/reports/energy-and-ai</a></li>
+<li id="ref-8">Uptime Institute, "Global Data Center Survey 2024." <a href="https://intelligence.uptimeinstitute.com/resource/uptime-institute-global-data-center-survey-2024" rel="noopener">https://intelligence.uptimeinstitute.com/resource/uptime-institute-global-data-center-survey-2024</a></li>
+<li id="ref-9">Database of State Incentives for Renewables and Efficiency, Iowa programs, including the Alternative Energy Law. <a href="https://programs.dsireusa.org/system/program/ia" rel="noopener">https://programs.dsireusa.org/system/program/ia</a></li>
+<li id="ref-10">NSF ACCESS, national computing, storage and cloud resources for researchers. <a href="https://access-ci.org/" rel="noopener">https://access-ci.org/</a></li>
+<li id="ref-11">National Center for Supercomputing Applications, Delta and DeltaAI allocation information. <a href="https://docs.ncsa.illinois.edu/en/latest/allocations/by-resource.html" rel="noopener">https://docs.ncsa.illinois.edu/en/latest/allocations/by-resource.html</a></li>
+<li id="ref-12">National AI Research Resource Pilot. <a href="https://nairrpilot.org/" rel="noopener">https://nairrpilot.org/</a></li>
+<li id="ref-13">OSG Consortium and the Open Science Pool. <a href="https://osg-htc.org/" rel="noopener">https://osg-htc.org/</a></li>
+<li id="ref-14">University of Iowa ITS Research Services, Argon cluster. <a href="https://research.its.uiowa.edu/argon" rel="noopener">https://research.its.uiowa.edu/argon</a></li>
+<li id="ref-15">Iowa State University Research IT. <a href="https://research.it.iastate.edu/" rel="noopener">https://research.it.iastate.edu/</a></li>
+<li id="ref-16">Minnesota Supercomputing Institute. <a href="https://msi.umn.edu/" rel="noopener">https://msi.umn.edu/</a></li>
+<li id="ref-17">University of Michigan Advanced Research Computing. <a href="https://its.umich.edu/advanced-research-computing/" rel="noopener">https://its.umich.edu/advanced-research-computing/</a></li>
+<li id="ref-18">Cloud region directories: <a href="https://cloud.google.com/about/locations" rel="noopener">Google Cloud locations</a>, <a href="https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/" rel="noopener">Microsoft Azure geographies</a> and <a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/" rel="noopener">AWS regions and availability zones</a>.</li>
+<li id="ref-19">Iowa State University, Atanasoff-Berry Computer information. <a href="https://jva.cs.iastate.edu/operation.php" rel="noopener">https://jva.cs.iastate.edu/operation.php</a></li>
+<li id="ref-20">NCSA Mosaic, history of the early graphical web browser. <a href="https://en.wikipedia.org/wiki/NCSA_Mosaic" rel="noopener">https://en.wikipedia.org/wiki/NCSA_Mosaic</a></li>
+<li id="ref-21">Center for High Throughput Computing, University of Wisconsin-Madison. <a href="https://chtc.cs.wisc.edu/" rel="noopener">https://chtc.cs.wisc.edu/</a></li>
+<li id="ref-22">Argonne Leadership Computing Facility. <a href="https://www.alcf.anl.gov/" rel="noopener">https://www.alcf.anl.gov/</a></li>
+</ol>
+</section>
+
+
+<div class="guide-legal">
+<p>Skiron is not affiliated with, sponsored by or endorsed by any university, laboratory, government program, cloud provider, hardware maker, utility or other organization named on this page. Names and trademarks belong to their owners. NVIDIA and H100 are trademarks of NVIDIA Corporation. This guide is general information. Plans described for Skiron's first site are plans and may change.</p>
+</div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-name">Skiron Technology, Iowa City, Iowa</p>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/thomas-j-walsh-nu2028" rel="me noopener" target="_blank">LinkedIn</a></li>
+        <li><a href="index.html#contact">Get in touch</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <p class="legal">NVIDIA and H100 are trademarks of NVIDIA Corporation. Skiron is not affiliated with NVIDIA.</p>
+    <p class="copy">© 2026 Skiron Technology</p>
+  </div>
+</footer>
+</body>
+</html>

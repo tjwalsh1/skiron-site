@@ -2,13 +2,10 @@
 (function () {
   'use strict';
 
-  // Paste the Web3Forms access key here and into the hidden access_key input in index.html.
+  // The Web3Forms access key, also set in the hidden access_key input in index.html.
   // The key is an alias for the destination address and is safe to publish.
-  var WEB3FORMS_KEY = 'REPLACE_WITH_WEB3FORMS_KEY';
-
-  // Email parts are joined here so the address is not written out in the page source.
-  var MAIL_USER = 'thomas.walsh';
-  var MAIL_HOST = 'law.northwestern.edu';
+  var WEB3FORMS_KEY = '395b4aac-2902-45e9-8675-f9e6960a4dae';
+  var KEY_PLACEHOLDER = 'REPLACE_WITH_WEB3FORMS_KEY';
 
   var doc = document;
   var root = doc.documentElement;
@@ -91,8 +88,10 @@
   }
 
   /* ------------------------------------------------------------ hero rotor */
-  // The rotor eases up to one turn every 30 seconds, and the server lights come on as it gets going.
-  // Scrolling, hovering or tapping puts a gust through it that fades back to the steady pace.
+  // The rotor eases up to one turn every 10 seconds and keeps that pace, and the server lights come on as it
+  // gets going. Moving the mouse over the page puts wind through it: the faster and farther the pointer moves,
+  // the faster the blades turn, and they ease back to the steady pace within a couple of seconds. Scrolling
+  // and tapping do the same, so touch screens get the effect too.
   //
   // The turn is a Web Animations animation. While the speed is changing (the ease-up and any gust) the
   // script sets its currentTime every frame. Changing playbackRate every frame stalls the clock in Chrome,
@@ -100,15 +99,18 @@
   var rotor = $('#rotor');
   if (rotor && motionOK && rotor.animate) {
     var art = rotor.closest('.hero-art') || rotor.parentNode;
+    var TURN_MS = 10000;   // one full turn at the steady pace
+    var GUST_MAX = 7;      // most extra speed a gust can add, as a multiple of the steady pace
+    var GUST_FADE = 1100;  // ms for a gust to fade by a factor of e
     var spin = rotor.animate(
       [{ transform: 'rotate(0deg)' }, { transform: 'rotate(360deg)' }],
-      { duration: 30000, iterations: Infinity }
+      { duration: TURN_MS, iterations: Infinity }
     );
     spin.pause();
     spin.currentTime = 0;
 
-    var angleMs = 0;       // position of the animation in ms; 30000 ms is one full turn
-    var ramp = 0;          // 0 to 1 over about four seconds
+    var angleMs = 0;       // position of the animation in ms; TURN_MS is one full turn
+    var ramp = 0;          // 0 to 1 over about three seconds
     var gust = 0;          // extra speed, decays back to zero
     var last = 0;
     var raf = 0;
@@ -137,8 +139,8 @@
       if (!live()) { return; }
       var dt = last ? Math.min(now - last, 64) : 16;
       last = now;
-      if (ramp < 1) { ramp = Math.min(1, ramp + dt / 4000); }
-      gust *= Math.exp(-dt / 900);
+      if (ramp < 1) { ramp = Math.min(1, ramp + dt / 3000); }
+      gust *= Math.exp(-dt / GUST_FADE);
       if (gust < 0.01) { gust = 0; }
       angleMs += dt * smooth(ramp) * (1 + gust);
       spin.currentTime = angleMs;
@@ -149,7 +151,8 @@
       freeze();
       if (!raf) { last = 0; raf = requestAnimationFrame(frame); }
     };
-    var addGust = function (g) { gust = Math.min(6, Math.max(gust, g)); kick(); };
+    var addGust = function (g) { gust = Math.min(GUST_MAX, Math.max(gust, g)); kick(); };
+    var pushWind = function (g) { gust = Math.min(GUST_MAX, gust + g); kick(); };
 
     var sync = function () {
       if (live()) {
@@ -168,7 +171,19 @@
     doc.addEventListener('visibilitychange', sync);
     sync();
 
-    art.addEventListener('pointerenter', function () { addGust(2.2); });
+    // Mouse or pen movement adds wind in proportion to the distance travelled. A pointer moving at
+    // 1000 px per second holds the rotor near four times the steady pace.
+    var lastX = null;
+    var lastPY = 0;
+    window.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') { return; }
+      var dx = lastX === null ? 0 : e.clientX - lastX;
+      var dy = lastX === null ? 0 : e.clientY - lastPY;
+      lastX = e.clientX;
+      lastPY = e.clientY;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (inView && dist >= 1) { pushWind(dist * (3 / GUST_FADE)); }
+    }, { passive: true });
     art.addEventListener('pointerdown', function () { addGust(5); });
 
     var lastY = window.scrollY;
@@ -200,14 +215,6 @@
     });
   }
 
-  /* ------------------------------------------------------------ email address, assembled here */
-  var address = MAIL_USER + '@' + MAIL_HOST;
-  $$('.js-mail').forEach(function (a) {
-    a.href = 'mailto:' + address;
-    a.textContent = address;
-    a.hidden = false;
-  });
-
   /* ------------------------------------------------------------ contact form */
   var form = $('#contact-form');
   if (form) {
@@ -215,8 +222,8 @@
     var button = $('button[type="submit"]', form);
     var sendLabel = button.textContent;
     var keyField = form.elements.access_key;
-    var key = WEB3FORMS_KEY !== '395b4aac-2902-45e9-8675-f9e6960a4dae' ? WEB3FORMS_KEY : (keyField ? keyField.value : '');
-    var connected = key && key !== '395b4aac-2902-45e9-8675-f9e6960a4dae';
+    var key = WEB3FORMS_KEY !== KEY_PLACEHOLDER ? WEB3FORMS_KEY : (keyField ? keyField.value : '');
+    var connected = key && key !== KEY_PLACEHOLDER;
     var checked = ['name', 'email', 'message'];
     var messages = {
       name: { valueMissing: 'Please enter your name.' },
@@ -224,18 +231,9 @@
       message: { valueMissing: 'Please write a message.' }
     };
 
-    // mail: 'end' puts the address at the end of the sentence, 'after' follows a finished sentence.
-    var say = function (text, ok, mail) {
+    var say = function (text, ok) {
       status.textContent = text;
       status.classList.toggle('is-ok', !!ok);
-      if (mail) {
-        if (mail === 'after') { status.appendChild(doc.createTextNode(' ')); }
-        var a = doc.createElement('a');
-        a.href = 'mailto:' + address;
-        a.textContent = address;
-        status.appendChild(a);
-        if (mail === 'end') { status.appendChild(doc.createTextNode('.')); }
-      }
     };
     var errorFor = function (name) { return $('#' + name + '-error'); };
     var showError = function (field, text) {
@@ -263,7 +261,7 @@
     });
 
     if (!connected) {
-      say('The form isn’t connected yet. Please email Thomas directly at ', false, true);
+      say('The form isn’t connected yet. Please check back soon.', false);
     }
 
     form.addEventListener('submit', function (e) {
@@ -276,7 +274,7 @@
       });
       if (firstBad) { firstBad.focus(); return; }
       if (!connected) {
-        say('The form isn’t connected yet. Please email Thomas directly at ', false, true);
+        say('The form isn’t connected yet. Please check back soon.', false);
         return;
       }
       if (form.elements.botcheck && form.elements.botcheck.checked) { return; }
@@ -305,7 +303,7 @@
         .then(function (data) {
           if (data && data.success) {
             form.reset();
-            say('Thanks, your message is on its way. Thomas will reply from his own email.', true);
+            say('Thanks, your message is on its way. Skiron will respond to you.', true);
             button.textContent = sendLabel;
             setTimeout(function () { button.disabled = false; }, 30000);
           } else {
@@ -315,7 +313,7 @@
         .catch(function () {
           button.disabled = false;
           button.textContent = sendLabel;
-          say('Something went wrong sending that. You can email Thomas directly at ', false, 'end');
+          say('Something went wrong sending that. Please try again in a moment.', false);
         });
     });
   }

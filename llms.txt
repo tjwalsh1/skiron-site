@@ -1,0 +1,12 @@
+# Skiron Technology
+
+> Skiron plans to build small GPU data centers beside Midwestern wind farms. They use wind power the grid cannot carry, draw on the local utility the rest of the time, and rent computing time to people building and running AI and cloud systems. Skiron is based in Iowa City, IA. The first site is in planning.
+
+## Guides
+
+- [Wind-Powered Computing, Green AI and Midwestern Cloud Resources: A Heartland Guide](https://tjwalsh1.github.io/skiron-site/midwest-green-compute-guide.html): A long reference on wind power, curtailment and the grid, green AI and sustainable computing, data center ethics, Midwestern innovation, and a directory of Midwestern AI, research computing and cloud resources. Includes a FAQ, a glossary and sources.
+
+## About Skiron
+
+- [Home page](https://tjwalsh1.github.io/skiron-site/): What Skiron is building, how a site works, the pilot plans, and how to get in touch.
+- [Privacy](https://tjwalsh1.github.io/skiron-site/privacy.html): How the site handles information.

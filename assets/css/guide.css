@@ -1,0 +1,42 @@
+/* Styles for the long-form guide page only. Colour tokens and fonts come from site.css. */
+
+.guide { padding-block: clamp(40px, 7vw, 88px); }
+.guide-inner { max-width: 46rem; margin-inline: auto; }
+
+.guide h1 { font-size: clamp(2rem, 4.6vw, 3rem); }
+.guide .dek { margin-top: 20px; font-size: 1.25rem; line-height: 1.55; color: var(--ink-soft); }
+.guide .byline { margin-top: 16px; font-size: 0.875rem; color: var(--ink-soft); }
+
+.guide p, .guide li { font-size: 1.0625rem; line-height: 1.65; }
+.guide p { max-width: none; margin: 0 0 1em; }
+.guide ul, .guide ol { margin: 0 0 1.2em; padding-left: 1.3em; }
+.guide li { margin-bottom: 0.5em; padding-left: 2px; }
+
+.guide-toc { margin: 36px 0 8px; padding: 20px 24px 12px; background: var(--mist); border: 1px solid var(--line); }
+.guide-toc h2 { margin: 0 0 12px; font-size: 1.125rem; }
+.guide-toc ol { margin: 0; }
+.guide-toc li { font-size: 1rem; margin-bottom: 6px; }
+
+.guide section { margin-top: 56px; }
+.guide h2 { margin: 0 0 16px; font-size: 1.75rem; }
+.guide h3 { margin: 32px 0 8px; }
+.guide h4 { margin: 24px 0 6px; font: 600 1.0625rem var(--font-head); }
+
+.table-wrap { margin: 20px 0 28px; overflow-x: auto; border: 1px solid var(--line); }
+.guide table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: 0.975rem; line-height: 1.5; }
+.guide caption { padding: 12px 16px; text-align: left; font: 600 1rem var(--font-head); }
+.guide th, .guide td { padding: 10px 16px; text-align: left; vertical-align: top; border-top: 1px solid var(--line); }
+.guide thead th { background: var(--mist); }
+.guide tbody th { font-weight: 600; width: 32%; }
+
+.guide dl { margin: 0; }
+.guide dt { margin-top: 20px; font: 600 1.0625rem var(--font-head); }
+.guide dd { margin: 4px 0 0; color: var(--ink-soft); line-height: 1.6; }
+
+.guide .refs { color: var(--ink-soft); }
+.guide .refs li { font-size: 0.9375rem; margin-bottom: 10px; }
+.guide .refs a { overflow-wrap: anywhere; }
+.guide .refs li:target { color: var(--ink); }
+
+.guide .guide-legal { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.875rem; color: var(--ink-soft); }
+.guide .guide-legal p { font-size: 0.875rem; }

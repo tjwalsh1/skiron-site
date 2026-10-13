@@ -17,8 +17,11 @@ Then open http://localhost:8000/. Any static file server works.
 | `index.html` | The one-page site |
 | `thanks.html` | Where the contact form lands when JavaScript is off |
 | `privacy.html` | Plain-language privacy notice |
+| `midwest-green-compute-guide.html` | Long-form reference guide. It is not linked from the home page. Search engines and AI agents find it through `sitemap.xml` and `llms.txt` |
+| `llms.txt` | Plain-text map of the site for AI agents |
 | `404.html` | Page shown for unknown addresses |
 | `assets/css/site.css` | All styles and colour tokens |
+| `assets/css/guide.css` | Extra styles used only by the guide page |
 | `assets/js/site.js` | Menu, hero animation, diagram and icon motion, contact form |
 | `assets/img/` | Logo, favicon, share image, headshot, icons |
 | `assets/fonts/` | Cabin and Inter (latin), with their SIL Open Font License texts |
@@ -32,6 +35,8 @@ To set it, replace `REPLACE_WITH_WEB3FORMS_KEY` in two places:
 
 1. the hidden `access_key` input in `index.html`
 2. the `WEB3FORMS_KEY` constant at the top of `assets/js/site.js`
+
+The key is set in both places now. `KEY_PLACEHOLDER` in `site.js` is only the marker the script compares against.
 
 To change where messages go, edit the destination in the Web3Forms dashboard. No code change is needed.
 
@@ -52,4 +57,4 @@ The site sets no cookies and loads nothing from other companies, so the only thi
 
 ## Motion
 
-The hero rotor, the diagram and the icons move. All of it stops when the visitor has asked their device for reduced motion, and the page reads the same without it.
+The hero rotor, the diagram and the icons move. The rotor turns steadily, once every 10 seconds, and speeds up when the mouse moves over the page, when the page is scrolled or when the logo is tapped, then settles back to its steady pace. All of it stops when the visitor has asked their device for reduced motion, and the page reads the same without it.
