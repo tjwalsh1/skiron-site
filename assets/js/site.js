@@ -88,113 +88,20 @@
   }
 
   /* ------------------------------------------------------------ hero rotor */
-  // The rotor eases up to one turn every 10 seconds and keeps that pace, and the server lights come on as it
-  // gets going. Moving the mouse over the page puts wind through it: the faster and farther the pointer moves,
-  // the faster the blades turn, and they ease back to the steady pace within a couple of seconds. Scrolling
-  // and tapping do the same, so touch screens get the effect too.
-  //
-  // The turn is a Web Animations animation. While the speed is changing (the ease-up and any gust) the
-  // script sets its currentTime every frame. Changing playbackRate every frame stalls the clock in Chrome,
-  // so at steady speed the animation is handed back to native playback and the script goes idle.
+  // The rotor turns at one constant speed, a full turn every 10 seconds, and the server lights come on as the
+  // page loads. It pauses while it is off screen.
   var rotor = $('#rotor');
   if (rotor && motionOK && rotor.animate) {
     var art = rotor.closest('.hero-art') || rotor.parentNode;
-    var TURN_MS = 10000;   // one full turn at the steady pace
-    var GUST_MAX = 7;      // most extra speed a gust can add, as a multiple of the steady pace
-    var GUST_FADE = 1100;  // ms for a gust to fade by a factor of e
     var spin = rotor.animate(
       [{ transform: 'rotate(0deg)' }, { transform: 'rotate(360deg)' }],
-      { duration: TURN_MS, iterations: Infinity }
+      { duration: 10000, iterations: Infinity, easing: 'linear' }
     );
-    spin.pause();
-    spin.currentTime = 0;
-
-    var angleMs = 0;       // position of the animation in ms; TURN_MS is one full turn
-    var ramp = 0;          // 0 to 1 over about three seconds
-    var gust = 0;          // extra speed, decays back to zero
-    var last = 0;
-    var raf = 0;
-    var inView = true;
-    var native = false;    // true while the browser is playing the animation by itself
-    var resume = false;    // was playing natively when it went off screen
-    var smooth = function (t) { return t * t * (3 - 2 * t); };
-    var live = function () { return inView && !doc.hidden; };
-
-    var freeze = function () {
-      if (!native) { return; }
-      angleMs = spin.currentTime;
-      spin.pause();
-      spin.currentTime = angleMs;
-      native = false;
-    };
-    var handBack = function () {
-      spin.currentTime = angleMs;
-      spin.playbackRate = 1;
-      spin.play();
-      native = true;
-      last = 0;
-    };
-    var frame = function (now) {
-      raf = 0;
-      if (!live()) { return; }
-      var dt = last ? Math.min(now - last, 64) : 16;
-      last = now;
-      if (ramp < 1) { ramp = Math.min(1, ramp + dt / 3000); }
-      gust *= Math.exp(-dt / GUST_FADE);
-      if (gust < 0.01) { gust = 0; }
-      angleMs += dt * smooth(ramp) * (1 + gust);
-      spin.currentTime = angleMs;
-      if (ramp < 1 || gust > 0) { raf = requestAnimationFrame(frame); } else { handBack(); }
-    };
-    var kick = function () {
-      if (!live()) { return; }
-      freeze();
-      if (!raf) { last = 0; raf = requestAnimationFrame(frame); }
-    };
-    var addGust = function (g) { gust = Math.min(GUST_MAX, Math.max(gust, g)); kick(); };
-    var pushWind = function (g) { gust = Math.min(GUST_MAX, gust + g); kick(); };
-
-    var sync = function () {
-      if (live()) {
-        if (resume) { resume = false; handBack(); } else if (ramp < 1 || gust > 0) { kick(); }
-      } else {
-        if (raf) { cancelAnimationFrame(raf); raf = 0; }
-        if (native) { resume = true; freeze(); }
-      }
-    };
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        inView = entries[entries.length - 1].isIntersecting;
-        sync();
+        if (entries[entries.length - 1].isIntersecting) { spin.play(); } else { spin.pause(); }
       }).observe(art);
     }
-    doc.addEventListener('visibilitychange', sync);
-    sync();
-
-    // Mouse or pen movement adds wind in proportion to the distance travelled. A pointer moving at
-    // 1000 px per second holds the rotor near four times the steady pace.
-    var lastX = null;
-    var lastPY = 0;
-    window.addEventListener('pointermove', function (e) {
-      if (e.pointerType === 'touch') { return; }
-      var dx = lastX === null ? 0 : e.clientX - lastX;
-      var dy = lastX === null ? 0 : e.clientY - lastPY;
-      lastX = e.clientX;
-      lastPY = e.clientY;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      if (inView && dist >= 1) { pushWind(dist * (3 / GUST_FADE)); }
-    }, { passive: true });
-    art.addEventListener('pointerdown', function () { addGust(5); });
-
-    var lastY = window.scrollY;
-    var lastT = performance.now();
-    window.addEventListener('scroll', function () {
-      var now = performance.now();
-      var v = Math.abs(window.scrollY - lastY) / Math.max(1, now - lastT);
-      lastY = window.scrollY;
-      lastT = now;
-      if (inView && v > 0.15) { addGust(Math.min(4.5, v * 0.9)); }
-    }, { passive: true });
 
     // Server lights come on, top unit first.
     $$('.led', art).forEach(function (el, i) {

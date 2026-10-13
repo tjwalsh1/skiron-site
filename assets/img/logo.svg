@@ -3,7 +3,6 @@
   <desc id="d">A three-blade wind turbine rotor above a stack of six server units.</desc>
   <style>
     svg { color: #1C1519; --paper: #FFFFFF; }
-    @media (prefers-color-scheme: dark) { svg { color: #EEE8EC; --paper: #171115; } }
     .line { fill: none; stroke: currentColor; stroke-width: 5.8; stroke-linejoin: round; }
     .ring { stroke-width: 5.2; }
     .led { fill: currentColor; }

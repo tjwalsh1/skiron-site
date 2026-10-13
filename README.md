@@ -57,4 +57,4 @@ The site sets no cookies and loads nothing from other companies, so the only thi
 
 ## Motion
 
-The hero rotor, the diagram and the icons move. The rotor turns steadily, once every 10 seconds, and speeds up when the mouse moves over the page, when the page is scrolled or when the logo is tapped, then settles back to its steady pace. All of it stops when the visitor has asked their device for reduced motion, and the page reads the same without it.
+The hero rotor, the diagram and the icons move. The rotor turns at a constant speed, once every 10 seconds, and nothing changes its pace. All of it stops when the visitor has asked their device for reduced motion, and the page reads the same without it.
